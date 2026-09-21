@@ -1,2 +1,12 @@
-# Brian-Kavolius-Matherne
-This is Brian KM's first Github action
+# Brian KM
+
+Brian KM is a horn and live electronics performer-composer based in Honolulu. His previous roles include artist director for The Melbourne Rainbow Band and Principal Horn for The United States Pacific Fleet Band. He is an MBA candidate at The Shidler College of Business. His mission is to inspire through performance and empower with education.
+
+See [FormalBio.md](FormalBio.md) to learn more.
+
+Full CV: [CV.md](CV.md)
+
+## Engagement Index
+
+No engagements yet — Case 1 is in progress.
+
