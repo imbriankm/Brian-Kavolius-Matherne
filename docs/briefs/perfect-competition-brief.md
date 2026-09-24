@@ -1,3 +1,5 @@
+Unfinished. 
+
 Problem found here: https://adamwstauffer.github.io/ai-lms/case-perfect-competition.html
 
 type: brief
