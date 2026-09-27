@@ -13,9 +13,13 @@ My farm needs to decide how many of the three crops (tomatoes, carrots, mesclun)
 
 ## What I am assuming
 I'm assuming all of the information I've been given is correct.
+
 I'm assuming I have unlimited funds to start this project, but that I can't modify the conditions (plots)  
+
 I'm assuming that there will be no emergencies that affect my outcomes. (A carrot plauge)
+
 I'm assuming that there be no changes in the stated incomes/revenues for the products.
+
 I'm assuming that I am required to plant all the beds for some kind of agricultural or legal reason. This might not be the case.
 
 ## Hypothesis
