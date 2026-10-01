@@ -34,3 +34,11 @@ A running record of meaningful AI sessions in this repository: what I asked, wha
 **What it did:** Pulled the latest `main` (the brief was on GitHub but not yet local), read the brief, and checked its numbers against the case facts page. Returned the critique in chat without editing the brief. Main findings: the stated assumptions are about the data being reliable, while the economic assumptions stay implicit (price-taking, whether my own 720 hours cost anything, whether temp labor is hired by the hour or by the worker, whether every bed has to be planted); the rationale contradicts itself (it says "mostly carrots" and "fewer than 7 tomato beds" but hypothesizes 30 mesclun and 14 tomatoes); a few figures don't match the case formula; and the headline mix is falsifiable, but the "How I would know I was wrong" section gives no threshold and doesn't name a model output to check.
 
 **What I caught / changed:** Nothing changed yet — critique received, brief not yet revised.
+
+## 2026-10-01 — Paper-topics folder for Professor Stauffer
+
+**Asked:** My professor said I could send a short description of some paper topics via the repo. Asked Claude to set up a folder for it. Paper must be micro or macro; my first idea is pricing structures of business coaching for musicians.
+
+**What it did:** Created `stauffer-ai-go-here/` with a stub `README.md` and `paper-topics.md`. Then interviewed me with questions about my interests instead of writing the topic itself, offered five ways to frame the idea as economics, and drafted the Topic 1 text from my chat answers, keeping my wording.
+
+**What I caught / changed:** Claude kept trying to combine all the options into one big paper; I pushed back and narrowed it to one question (\"Are we preying on artist desperation, and is there a better way?\"). Topic 2 (how a big local event affects small and arts businesses, using Charlottesville, Virginia) and Topic 3 (why small businesses fail) were drafted from my chat answers, and I tied all three to one question about demand uncertainty. I dropped a \"how I would know I was wrong\" section Claude had added, because it didn't fit a short topic description. Remaining checks before relying on it: confirm the Rolling Stones/Charlottesville detail and that the Field label for Topic 2 is right.
