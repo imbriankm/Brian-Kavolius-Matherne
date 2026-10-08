@@ -1,4 +1,4 @@
-# Paper topic ideas
+# Paper prewriting
 
 The paper has to be on microeconomics or macroeconomics. These are the topics I'm considering.
 
@@ -18,7 +18,45 @@ The major question behind all of these is about demand uncertainty: will custome
 
 **What a better way might look like:** I don't know yet, and figuring that out is what the paper is about.
 
-## Topic 2: How does a big local event affect small and arts businesses in a small town?
+### Professor Stauffer's questions on Topic 1
+
+**1. What would the price data have to show for you to conclude that a program is priced on the buyer's desperation, rather than on what it delivers or on ordinary price discrimination? Decide that before you collect the sales pages.**
+
+I think the hardest part is going to be getting data for this. Coaches do early bird pricing as a sales tactic, and I can probably find some.
+
+I think a desperation pricing model will have high prices, but include things like "Invest in yourself." One coach I know of charges by the hour and is clear about what she's delivering, so I don't think she's predatory. Other coaches don't list prices (that'll be hard to get). In my mind, the sales tactics define if it's desperation/predatory or not.
+
+I'll need to keep individual coaches' names out of the repo.
+
+I think the desperation language pricing will be higher, to be honest. Significantly.
+
+The thing I'm looking at is price vs coach-contact time. Coach contact time is defined as (contact hours) / (number of clients in the group). So a single 1-1 session is worth 1 hour, and a 2-hour session with 4 people is worth 1/2 hour.
+
+I think the predatory programs will be more than doubly expensive than non-predatory programs, and I think those programs will also have aggressive sales tactics.
+
+So the process will have to be:
+
+1. Gather a number of sales pages for these programs.
+2. Analyze the pricing (separate expensive from not expensive).
+3. THEN, analyze the language with a predefined understanding of what predatory sales tactics are.
+
+**2. What can a buyer know about a coaching program before paying, and what only after? Where does that leave the buyer when deciding?**
+
+_Not answered yet._
+
+**3. If buyers can't judge quality in advance, why haven't refund guarantees, outcome-based fees or published client results pushed the expensive programs out? What would your sales-page sample tell you about that?**
+
+_Not answered yet._
+
+**4. Cohort programs spread one coach's hours over more students. How will you measure what each student actually gets for the price?**
+
+Coach contact time: (contact hours) / (number of clients in the group), compared against price. (See question 1.)
+
+---
+
+## ~~Topic 2: How does a big local event affect small and arts businesses in a small town?~~
+
+**Status: not pursuing.** Interesting, but not what I'm doing. I'm going with Topic 1.
 
 **Field:** Macroeconomics (local or regional impact)
 
@@ -30,7 +68,9 @@ The major question behind all of these is about demand uncertainty: will custome
 
 **What I'd need to find out / data I could use:** Local tax data if it's available, and short interviews or emails with business owners.
 
-## Topic 3: Why do small businesses fail?
+## ~~Topic 3: Why do small businesses fail?~~
+
+**Status: not pursuing.** Interesting, but not what I'm doing. I'm going with Topic 1.
 
 **Field:** Microeconomics
 
