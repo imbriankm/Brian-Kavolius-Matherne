@@ -27,11 +27,25 @@ I'm assuming that I am required to plant all the beds for some kind of agricultu
 My guess is 30 mesclun, 20 carrots, and 14 tomato beds.
 
 Rationalization:
-Tomato Only Thinking: I expect that the best choice will be to plant mostly mesclun, then carrots, with tomatoes being last. I think this because carrots carry the lowest costs. Tomatoes will likely balloon in diminishing returns and labor costs. Since the diminishing returns is about 10%, I would have expected to plant less than 7 beds of the tomatoes. However, that bed size is so vast, the logic switches to thinking about minimizing inefficiencies, resulting in my suggested planting of 14 beds for tomatoes. (See further hypothesis thinking below)
+Tomato Only Thinking: I expect that the best choice will be to plant mostly mesclun, then carrots, with tomatoes being last. I think this because carrots carry the lowest costs. Tomatoes will likely balloon in diminishing returns and labor costs. Since the diminishing returns is about 10%, I initially expected to plant less than 7 beds of the tomatoes. When I did the diminishing returns math in my head, I was thinking "Tomatoes are going to become not profitable after 7 beds". When I saw that I could plant so many beds, I realized I could have much more. However, that bed size is so vast, the logic switches to thinking about minimizing inefficiencies, resulting in my suggested planting of 14 beds for tomatoes. (See further hypothesis thinking below)
 
 After considering available room: I think that carrots will have the max planting (20 beds). At that stage, the diminishing returns will only have multiplied to about 64%. Mesclun's fertilizer costs (double that of carrots) will be the limiting factor here. If I had planted 20 beds of carrots and only 7 beds of tomatoes, I will have only planted 27 beds out of 64. It is likely better to think of this as "what not to plant", instead of what to plant, because the crops themselves limit my ability to have large swings in ratios. 20 tomato beds, 20 carrot beds, and 30 mesclun beds means that I only can plant 70, meaning I have to reduce any of the crops, or a mix of them, by 6. I expect this to be tomatoes. 
 
 ## How I would know I was wrong
 The mathematical model would have to display that my assumptions about the tomatoes ballooning costs is incorrect. It also might be possible for a certain amount of a crop to end up losing money if it is planted too much. This is most possible for tomatoes. 
-If the solver produces evidence that the tomato bed's predicted inefficiencies are indeed overcome by their increased revenue, then I would be wrong about the cost part of my argument. For example, the model could show that tomatoes only become too costly at 18 beds (and become not profitable). 
+If the solver produces evidence that the tomato bed's predicted inefficiencies are indeed overcome by their increased revenue, then I would be wrong about the cost part of my argument. For example, the model could show that tomatoes only become too costly at 16 beds (and become not profitable). 
 
+
+**Directional vs Point Based Thinking.** My guesses are directional. I think tomatoes are not very good at high numbers when compared to carrots and mesclun. If we're planting fewer than 5 beds, I think tomatoes are the tops. At high numbers, I think carrots and mesclun are better, not necessarily strong. Using a 20% line on my guess of 14 tomato beds, by the Solver's optimal mix:
+
+- **12–15 tomato beds:** close enough, my prediction holds.
+- **11 or fewer:** my number was off by 20% or more, but I'm directionally right.
+- **16 or more:** I'm directionally wrong. The higher end will show I'm especially wrong.
+
+My hypothesis would be wrong if the solver shows that I'm wrong about:
+
+- The profitability of mesclun and carrots at high numbers
+- The unprofitability of tomatoes at numbers >8 beds
+- The relationship between those numbers
+
+I suppose there's a reality where we shouldn't plant 64 beds at all.
