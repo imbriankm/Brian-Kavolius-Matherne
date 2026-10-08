@@ -1,12 +1,13 @@
+---
 type: brief
 engagement: perfect-competition
 capability: decision-analysis
-date due: 2026-09-29
-status: complete (1 round of feedback included)
+date: 2026-10-02
+status: committed
 hypothesis: 30 mesclun, 20 carrots, and 14 tomato beds
 ---
 
-# <Engagement> — engagement brief
+# Perfect competition — engagement brief
 
 ## The problem
 My farm needs to decide how many of the three crops (tomatoes, carrots, mesclun) to plant this year. The farm has 64 beds and the ability to hire four workers. There seems to be no budget. There are 64 beds to plant in, and the average price of a bed, just in fertilizer, is just over $700. The beds are my limitation, not any budget restriction, so I should use as much of the beds as I can while minimizing the diminishing returns. Tomatoes have a large revenue of $8800, but requires a larger labor force and has a greater diminishing returns rate. Carrots have the smallest revenue and the lowest costs. Mesclun has a slightly larger revenue than carrots, and is the most efficient in terms of diminishing returns. The challenge will be to maximize profits, when considering labor costs, fertilizer costs, "diminishing returns rate", and the hopeful profit. The wrong choice will create a loss of profit opportunity for the farm. There is a $20k fixed cost to participate in this season. There is a labor hour ceiling as well. My own available labor is 720 hours (implied at 34.72 per hour), and I can hire 4 temp workers at $17.36 per hour. I can hire them at 1440 hours for the season each. I have a total amount of man/woman hours of 6480.
