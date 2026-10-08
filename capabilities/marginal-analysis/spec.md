@@ -45,7 +45,12 @@ All values come from the case facts page (`case-perfect-competition.html`).
 
 ## Structure
 
-_Not written yet._
+One workbook file (`model.xlsx`) with four tabs:
+
+1. **Inputs:** the named inputs above, and nothing else.
+2. **Schedules:** one table per crop, one row per bed number, showing the hours and cost that one extra bed adds (the marginal cost schedule).
+3. **Optimizer:** the three bed counts Solver changes, the resulting profit and loss, and the Solver setup.
+4. **Checks:** pass/fail cells for every constraint and validation rule, green when met.
 
 ## Calculation logic
 
@@ -63,7 +68,17 @@ _Not written yet._
 
 ## Outputs
 
-_Not written yet._
+From my Purpose:
+
+- Which ratio of crops to plant, and how many of each.
+- Whether there is a "ceiling" where planting less than 64 beds makes sense.
+- Whether the fixed costs are covered — whether our business is even possible.
+
+And also:
+
+- At what point each crop becomes not-profitable (in theory, not just capped at the bed cap). Each crop's schedule keeps going past its cap until an extra bed costs more than it earns.
+- The minimum amount I can plant and still manage my fixed costs. I want both answers: the smallest total number of beds where the best mix still covers the $20,000, and the fewest beds of each crop that would cover it on its own.
+- What percentage of my costs are labor, fertilizer, and the fixed cost — all three, so I know which is most expensive for me. (If I find big discrepancies, I might be able to focus my negotiation efforts on lower prices elsewhere.)
 
 ## Audit findings
 
