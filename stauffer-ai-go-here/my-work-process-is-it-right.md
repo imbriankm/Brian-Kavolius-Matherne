@@ -6,7 +6,7 @@ I'd like feedback on **how** I'm using AI, not only on what I produce. Claude (C
 
 1. **I set the goals and the order.** This session: take in your feedback, start Stage 2, work on the paper.
 2. **Claude explains, I decide.** I don't have a math background. When a concept stops me (falsifiability, a tipping point versus a bed count, what a spec is), I ask Claude to explain it at a lower level, often with a comparison from my teaching studio. Then I make the call.
-3. **I answer in chat, and Claude places my words.** For anything substantive, Claude asks me questions. I answer in my own words, and Claude puts the answers into the file and formats them. When Claude adds a connecting phrase or a label of its own, it tells me, and I keep it, change it, or remove it.
+3. **I answer in chat, and Claude places my words.** For anything substantive, Claude asks me questions. I answer in my own words, and Claude puts the answers into the file and formats them. When Claude adds a connecting phrase or a label of its own, it tells me, and I keep it, change it, or remove it. I've encouraged Claude to use my own language as much as possible. This is my writing; Claude is formatting it.
 4. **Claude does the mechanical work.** Front matter, headings, links, folder setup, git commits, and now opening PRs.
 5. **I check before committing.** Claude shows me each change before it is committed.
 
@@ -27,9 +27,8 @@ In my words: "You're doing the organization, I'm doing the thinking, and you're 
 
 _Draft — I'll revise this section at the end of this block of work. I think it undersells how much of the writing is mine._
 
-1. **Stage 2 says "you write the spec."** I can write the Purpose. Without a math background, I don't think I can write the Inputs, Structure or Conventions from a blank page. My plan is to have Claude ask me plain-language questions, so that each choice in the spec is my decision. For example: does my own time cost money, must every bed be planted, and are temp workers hired whole or by the hour? Claude would lay the case's given numbers out in the inputs table and propose names for me to approve. **Is that acceptable, or does it cross into Claude writing the spec?**
+1. **Stage 2 says "you write the spec."** I can write the Purpose. Without a math background, I don't think I can write the Inputs, Structure or Conventions from a blank page. My plan is to have Claude ask me plain-language questions, so that each choice in the spec is my decision. For example: must every bed be planted, how far past each cap the schedules should run, and which outputs I need to test my own prediction? Claude would lay the case's given numbers out in the inputs table and propose names for me to approve. **Is that acceptable, or does it cross into Claude writing the spec?**
 2. **Claude builds the workbook and explains the math to me.** I'll run Solver and do the audit checks myself, with Claude walking me through them. Is that the right division?
-3. **Is "I answer in chat, Claude places and formats" enough to count as my writing?** For the research paper as well as the case?
 
 ## Getting your feedback
 
