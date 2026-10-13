@@ -8,5 +8,6 @@ Full CV: [CV.md](CV.md)
 
 ## Engagement Index
 
-No engagements yet — Case 1 is in progress.
+- **Case 1 — Perfect Competition (in progress):** [engagement brief](docs/briefs/perfect-competition-brief.md)
+- **Background:** [CV](CV.md) · [Formal bio](FormalBio.md)
 

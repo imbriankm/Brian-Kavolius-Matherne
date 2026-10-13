@@ -1,5 +1,5 @@
 # Stauffer's AI go here
 
-Short descriptions of paper topics I'm considering, for Professor Stauffer to look over.
+Paper prewriting and notes on my work process, for Professor Stauffer to look over.
 
-See [paper-topics.md](paper-topics.md).
+See [paper-prewriting.md](paper-prewriting.md).

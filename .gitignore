@@ -5,3 +5,6 @@
 ~$*.pptx
 .DS_Store
 Thumbs.db
+
+# Private working files for the research paper (never committed)
+scratch/
