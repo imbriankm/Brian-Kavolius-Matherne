@@ -2,6 +2,23 @@
 
 A running record of meaningful AI sessions in this repository: what I asked, what the AI got wrong, and how I caught it.
 
+## 2026-10-14 — Stage 1.2 spec: calculation logic, validation rules, What-if tab
+
+**Asked:** A status update on my projects, and help understanding the push/pull/PR workflow with Professor Stauffer. Then merge his 2026-10-12 review (PR #4) and interview me to finish the Stage 1.2 spec.
+
+**What it did:** Explained the two directions of pull requests: mine to him for feedback, and his review PRs to me, which I merge and then pull. He had answered PR #3's questions inside PR #4. Merged PR #4 with a merge commit and pulled it. Read the Stage 2 case page for the labor formula, then asked me questions and placed my answers into `capabilities/marginal-analysis/spec.md`: labor hours, the hours one extra bed adds, labor cost (my hours first, then the blended rate), revenue, fertilizer, profit, the Solver rules, marginal cost, the Schedules tab, and validation rules. At my request, it added a README tab and a "What if workers got tired throughout the week?" tab, a side interest project using my own fatigue rule (1% less efficient each hour, and 1% more each day until the weekend). It also started `docs/decisions/perfect-competition-memo-notes.md` for Stage 3 ideas.
+
+**Who did what:** I made every decision in the spec: the assumptions, the printed labor rates, whole beds, the 10% tolerance, and the What-if rule. I did the hand checks on a calculator (one tomato bed is 99 hours, two are 217.8). Claude explained the math, wrote the formula notation and most of the connecting sentences, and placed my answers. The wording doesn't sound exactly like me, but I approved it.
+
+**What I caught / changed:**
+
+- Claude's studio comparison for diminishing returns was wrong: in my studio, more students make me more efficient. I explained it with soil fatigue and walking further instead.
+- I disagree with Claude that adding a bed raises the hours of the beds already planted ("time travel isn't possible"). We're asking Professor Stauffer to resolve it. The numbers come out the same either way.
+- Claude kept bringing up the published check figures (10/20/30, $42,762), and wrote about them in a way I read as my prediction. I had wanted not to know the answers. I asked for a reset, and we separated my prediction (14/20/30), my falsification test, and the check figures, which only test whether the workbook was built correctly.
+- Claude asked too many questions at once and mixed up terms. For example, I read its fertilizer question as being about crops' diminishing returns. It now asks one question at a time.
+- Claude recommended an exact match for the bed mix; I kept 10% for every check figure (±1, ±2, ±3 beds).
+- Claude changed my "labor hours will be cut in half" to "the cost of a labor hour is cut in half," which is what I meant.
+
 ## 2026-10-08 — Review feedback, Stage 1.2 spec start, paper prewriting
 
 **Asked:** Plan a session to take in Professor Stauffer's feedback, start Stage 1.2, and work on the paper. Set up the feedback workflow he asked for (open PR tagged @adamwstauffer). I don't have a math background, so I asked Claude to explain the math and handle the build, while I do the thinking.

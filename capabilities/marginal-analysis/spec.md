@@ -3,7 +3,7 @@ type: spec
 capability: marginal-analysis
 engagement: perfect-competition
 date: 2026-10-08
-status: draft
+status: committed
 built_with:
 ---
 
