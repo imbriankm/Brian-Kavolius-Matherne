@@ -42,7 +42,24 @@ So the process will have to be:
 
 **2. What can a buyer know about a coaching program before paying, and what only after? Where does that leave the buyer when deciding?**
 
-_Not answered yet._
+I could see the tangible stuff for sure:
+
+1. Time spent with the coach
+2. Time spent in the cohort
+3. "Facebook groups" or other things like that
+4. Course materials or modules
+
+I couldn't see:
+
+1. Future effects
+2. Specific content
+
+The buyer has to decide (guess): will the program deliver movable career results?
+
+Their evidence could be:
+
+1. Published testimonials
+2. Their own research, trying to find others who did this program
 
 **3. If buyers can't judge quality in advance, why haven't refund guarantees, outcome-based fees or published client results pushed the expensive programs out? What would your sales-page sample tell you about that?**
 
