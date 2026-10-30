@@ -4,7 +4,7 @@ capability: marginal-analysis
 engagement: perfect-competition
 date: 2026-10-08
 status: committed
-built_with:
+built_with: model.xlsx, built by Claude from this spec on 2026-10-27
 ---
 
 # Marginal analysis — farm planting model spec
@@ -26,7 +26,7 @@ All values come from the case facts page (`case-perfect-competition.html`).
 | `Tomato_DimRate` | 10% | added labor per bed planted | Case facts, crop table |
 | `Carrot_Cap` | 20 | beds | Case facts, crop table |
 | `Carrot_Revenue` | 2,094 | $ per bed | Case facts, crop table |
-| `Carrot_HoursPerWeek` | 0.833 | labor hours per week per bed | Case facts, crop table |
+| `Carrot_HoursPerWeek` | 50 ÷ 60 (0.8333…) | labor hours per week per bed | Case facts, crop table (printed as 0.833, which is 50 minutes rounded) |
 | `Carrot_Fertilizer` | 440 | $ per bed | Case facts, crop table |
 | `Carrot_DimRate` | 2.5% | added labor per bed planted | Case facts, crop table |
 | `Mesclun_Cap` | 30 | beds | Case facts, crop table |
@@ -38,10 +38,18 @@ All values come from the case facts page (`case-perfect-competition.html`).
 | `SeasonWeeks` | 36 | weeks | Case facts, farm inputs |
 | `FixedCost` | 20,000 | $ per season | Case facts, farm inputs |
 | `OwnHours` | 720 | hours per season | Case facts, farm inputs |
-| `OwnRate` | 34.72 | $ per hour (implied) | Case facts, farm inputs |
-| `TempRate` | 17.36 | $ per hour | Case facts, farm inputs |
+| `OwnSeasonPay` | 50,000 | $ per season | Case facts, farm inputs (the given behind the printed $34.72) |
+| `OwnPayBasisHours` | 1,440 | paid hours per season (720 of them in the field) | Case facts, farm inputs |
+| `TempSeasonPay` | 25,000 | $ per temp worker per season | Case facts, farm inputs (the given behind the printed $17.36) |
 | `TempHoursEach` | 1,440 | hours per worker per season | Case facts, farm inputs |
 | `MaxTemps` | 4 | workers | Case facts, farm inputs |
+
+`OwnRate` and `TempRate` are not typed in. The workbook works them out from the givens above, and everything else uses them by name:
+
+```
+OwnRate  = OwnSeasonPay ÷ OwnPayBasisHours   (50,000 ÷ 1,440 = 34.7222…, printed in the case as 34.72)
+TempRate = TempSeasonPay ÷ TempHoursEach  (25,000 ÷ 1,440 = 17.3611…, printed in the case as 17.36)
+```
 
 ### What-if inputs
 
@@ -58,7 +66,7 @@ These are my own assumptions, not the case's, for the worker fatigue side projec
 
 ## Structure
 
-One workbook file (`model.xlsx`) with five tabs:
+One workbook file (`model.xlsx`) with six tabs:
 
 1. **README:** how to use the workbook, for someone opening it for the first time: what the model is for, what each tab does, how to change an input, how to run Solver, and how to read the Checks tab.
 2. **Inputs:** the named inputs above, and nothing else.
@@ -80,6 +88,8 @@ Mesclun_Hours(q) = q × Mesclun_HoursPerWeek × SeasonWeeks × (1 + Mesclun_DimR
 ```
 
 The `(1 + DimRate)^q` term is the diminishing returns. On the farm, I think it's explained by soil fatigue and walking further. Each crop counts separately: more tomato beds don't change carrot or mesclun hours. This is an assumption, because it's reasonable to assume that worker diminishing effort/fatigue is possible (not crop specific).
+
+All the beds are planted at the start of the season, so "one more bed" means planning a season with one more bed, not adding a bed later. With more beds, every bed takes a little more work all season: more bugs, a busier harvest, more walking. Either way, the hours one extra bed adds are the same (118.8 for the second tomato bed), and that is the only number P = MC and Solver use.
 
 ### Hours one extra bed adds
 
@@ -130,15 +140,37 @@ Solver changes the three bed counts to make `Season profit` as large as possible
 - Total beds are no more than `TotalBeds`.
 - `TempHours` is no more than `MaxTemps × TempHoursEach`.
 
+A second Solver setup on the Optimizer tab finds `BreakEvenBeds`. It has its own three bed counts and its own copy of the profit calculation (names starting `BreakEven_`), so it never overwrites the best mix. It makes `BreakEven_BedsPlanted` as small as possible, with the same rules plus `BreakEven_SeasonProfit` of 0 or more.
+
+The temp-hours limit, `MaxTemps × TempHoursEach`, sits in its own cell (`TempHoursMax`) so Solver can use it as a constraint. The caps and `TotalBeds` are copied from Inputs into a "Limits Solver uses" block on the Optimizer and What if tabs, because Excel's Solver misread a constraint pointing at another tab (`Inputs!$B$15`, `Mesclun_Cap`, came back as `LaborCost`, the cell at B15 on the Optimizer tab). The Solver setups for the Optimizer and What if tabs are saved in the workbook.
+
 ### Marginal cost
 
 The cost one extra bed adds, using the same subtraction rule as for hours: the total cost (labor plus fertilizer) with `q` beds, minus the total cost with `q − 1` beds.
+
+For the Schedules tab, each crop's cost is worked out as if it were the only crop planted: my 720 hours go to that crop first, then temporary hours. This only decides which wage each hour is paid; the hours come from that crop's own labor formula, bugs and all. Solver doesn't use these schedules. It costs the whole farm together, as in Labor cost above.
+
+```
+Tomato_LaborCost(q) = (the smaller of Tomato_Hours(q) and OwnHours) × OwnRate
+                    + (Tomato_Hours(q) − OwnHours, or 0 if that is negative) × TempRate
+Tomato_Cost(q)      = Tomato_LaborCost(q) + q × Tomato_Fertilizer
+Tomato_MC(q)        = Tomato_Cost(q) − Tomato_Cost(q − 1)
+```
+
+Carrots and mesclun work the same way, with their own hours and fertilizer:
+
+```
+Carrot_MC(q)  = Carrot_Cost(q)  − Carrot_Cost(q − 1)
+Mesclun_MC(q) = Mesclun_Cost(q) − Mesclun_Cost(q − 1)
+```
+
+Zero beds cost zero, so `Tomato_MC(1)` is the whole cost of the first bed: 99 hours × `OwnRate` + `Tomato_Fertilizer`.
 
 What I expect: where my 720 hours run out, the cost of the next bed will likely drop, because the cost of a labor hour is cut in half ($34.72 to $17.36). I don't think diminishing returns will have that large of an effect at that point, but the model will show that.
 
 ### Schedules tab
 
-Each crop's schedule is worked out on its own, as if it were the only crop planted: my 720 hours go to that crop first, then temporary hours. For each bed `q`, the schedule shows that crop's hours, the extra hours bed `q` adds, the marginal cost of bed `q`, and the crop's revenue per bed, so I can see where marginal cost meets revenue. Each schedule runs past the crop's cap until marginal cost is above revenue per bed.
+Each crop's schedule is worked out on its own, as if it were the only crop planted: my 720 hours go to that crop first, then temporary hours. For each bed `q`, the schedule shows that crop's hours, the extra hours bed `q` adds, the marginal cost of bed `q`, and the crop's revenue per bed, so I can see where marginal cost meets revenue. Each schedule runs past the crop's cap until marginal cost is above revenue per bed. In the workbook, every schedule runs to bed 50, and the Checks tab confirms marginal cost is above revenue on that last row. Each schedule also shows profit after `FixedCost` for that crop alone (`q × Crop_Revenue − total cost − FixedCost`), which is where the `BreakEvenBeds` for each crop comes from.
 
 ### What if workers got tired throughout the week?
 
@@ -162,7 +194,7 @@ OwnEfficiency  = average of Efficiency over my week
 The field hours needed come from the main labor formula, unchanged. Paid hours are higher, because a tired hour gets less done:
 
 ```
-WorkHours     = TotalHours, from the main model
+WorkHours     = the main model's TotalHours formula, using this tab's own bed counts
 OwnWork       = the smaller of WorkHours and OwnHours × OwnEfficiency
 OwnPaidHours  = OwnWork ÷ OwnEfficiency
 TempPaidHours = (WorkHours − OwnWork) ÷ TempEfficiency   (no more than MaxTemps × TempHoursEach)
@@ -175,9 +207,9 @@ Revenue, fertilizer, profit and the blended rate work as in the main model, and 
 
 - **Beds:** 64 is the most we can plant, not a requirement. This is a blend of my assumptions from the brief. I think we will end up planting all 64. However, the model may show we should plant fewer.
 - **Whole beds:** you can't plant part of a bed, so every bed count is a whole number.
-- **Carrot labor:** use `Carrot_HoursPerWeek` = 0.833 exactly as the case prints it, not 5/6.
+- **Carrot labor:** carrots take 50 minutes a week per bed, so `Carrot_HoursPerWeek` is entered as 50 ÷ 60. The case prints 0.833, which is 50 minutes rounded. Changed on 2026-10-28, after the audit (see Audit findings). When I know the exact number behind a rounded one, I use it; when I don't, I round in the direction that lowers profit.
 - **Labor:** My own first 720 hours are valued at $34.72 per hour. Every hour of labor after 720 costs $17.36. (I can do this for up to 5,760 hours after the initial 720: 4 temp workers × 1,440 hours each.)
-- **Labor rates:** use `OwnRate` = 34.72 and `TempRate` = 17.36 exactly as the case prints them. Both work out to about $25,000 for the season (720 × 34.72 and 1,440 × 17.36 are each $24,998.40), but I'm not using the unrounded $25,000 ÷ hours.
+- **Labor rates:** the case prints $34.72 and $17.36, which are rounded from the season pay and hours behind them: $50,000 ÷ 1,440 paid hours for me, $25,000 ÷ 1,440 hours for a temp. The model is a tool the farmer can reuse when the numbers change, so the inputs are the season pay and the hours, and the workbook works out `OwnRate` and `TempRate` (see Inputs). Changed on 2026-10-29, after the audit (see Audit findings). The exact rates are slightly higher than the printed ones, so this also follows my rule of rounding the way that lowers profit. At 10 / 20 / 30, my 720 hours are all used, and the model charges them at the exact rate, 720 × 34.7222… = $25,000.00, where the printed rate would charge $24,998.40. The temps use fewer hours than the 5,760 available, so their season pay is not a cap here, only the way their hourly rate was worked out.
 
 ## Validation rules
 
@@ -229,17 +261,55 @@ If a check fails, fix the spec and rebuild the workbook from it, rather than pat
 
 From my Purpose:
 
+Each output is answered in a named result cell, shown after it.
+
 - Which ratio of crops to plant, and how many of each.
+  - Optimizer: `Tomato_Beds`, `Carrot_Beds`, `Mesclun_Beds`.
 - Whether there is a "ceiling" where planting less than 64 beds makes sense.
+  - Optimizer: `BedsPlanted` (the three bed counts added up) and `BedsUnused` (`TotalBeds` − `BedsPlanted`).
 - Whether the fixed costs are covered — whether our business is even possible.
+  - Optimizer: `SeasonProfit`. Covered if it is 0 or more.
 
 And also:
 
 - At what point each crop becomes not-profitable (in theory, not just capped at the bed cap). Each crop's schedule keeps going past its cap until an extra bed costs more than it earns.
+  - Schedules: `Tomato_LastProfitableBed`, `Carrot_LastProfitableBed`, `Mesclun_LastProfitableBed`, the last bed where marginal cost is at or below revenue per bed. These can pass the cap (26 carrot, 37 mesclun), which shows the farmer what expansion would be worth.
+  - Schedules: `Tomato_LastPossibleProfitableBed`, `Carrot_LastPossibleProfitableBed`, `Mesclun_LastPossibleProfitableBed`, the last bed at or below the crop's cap where marginal cost is at or below revenue per bed. This is the figure the farmer can actually plant (10 tomato, 20 carrot, 30 mesclun). The report states both.
 - The minimum amount I can plant and still manage my fixed costs. I want both answers: the smallest total number of beds where the best mix still covers the $20,000, and the fewest beds of each crop that would cover it on its own.
+  - Optimizer: `BreakEvenBeds`, from the second Solver setup. Schedules: `Tomato_BreakEvenBeds`, `Carrot_BreakEvenBeds`, `Mesclun_BreakEvenBeds`.
 - What if workers got tired throughout the week? The best mix, profit and paid labor hours, side by side with the main model.
+  - What if: `WhatIf_Tomato_Beds`, `WhatIf_Carrot_Beds`, `WhatIf_Mesclun_Beds`, `WhatIf_SeasonProfit`, `WhatIf_PaidHours`, next to `TotalHours` from the main model.
 - What percentage of my costs are labor, fertilizer, and the fixed cost — all three, so I know which is most expensive for me. (If I find big discrepancies, I might be able to focus my negotiation efforts on lower prices elsewhere.)
+  - Optimizer: `LaborShare`, `FertilizerShare`, `FixedShare`, each one's share of total cost.
 
 ## Audit findings
 
-_Added after the build._
+_Added after the build. Each finding is in my own words._
+
+### Finding 1: the cost of a carrot bed drops at bed 17
+
+The cost drop at bed 17 is when the farmer's working hours are exhausted and the labor is switched to temporary workers.
+
+### Finding 2: the last profitable beds (26 carrot, 37 mesclun) are beyond the caps
+
+There is a profit changing event that occurs when the farmer exhausts his/her her labor hours and the temp workers are employed. The most profitable plan for each crop planted alone would involve 26 carrot beds and 37 mesclun beds, but the caps (20 and 30) prevent those figures. The most profitable result, because of the labor swap, is 10, 20, and 30.
+
+### Finding 3: entering the Solver rules
+
+I had problems with writing the solver, entering the cells correctly. Occasionally, I wouldn't select the second box before selecting my next cell, which would overwrite the first cell. This created an error where the same cell would be entered twice. AI helpers had to spot this error and direct the user (me) to fix it.
+
+### Finding 4: the two rounding decisions
+
+There are two rounding decisions in this model. The first, is the amount of hours it takes to work a carrot bed. The case prints .833 which is a repeating number. However, this is closest to 50 minutes, which is what I used for the model.
+
+Wages were calculated by dividing the number of hours divided by the budget for that labor. ($25k/1440)
+
+These decisions closed a $13 gap from the original model. We made this adjustment after seeing the professor's check figure.
+
+### Finding 5: the fatigue What-if
+
+The what if tab was written as a question of curiosity about workers getting fatigued. I reasoned that diminishing returns may be involved in workers themselves as well. However, after a guess at the rates of fatigue, I learned that it did not have an impact on the beds planted. (Although profit fell slightly due to the increased hours).
+
+### Finding 6: which check I trust most
+
+I think the number of beds is the decision that is being made. Therefore, if a model fits the professor's bed counts, then it is the most trustworthy measure.
