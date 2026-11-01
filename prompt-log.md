@@ -19,6 +19,7 @@ _Claude drafted this entry from the session, including "What I caught / changed"
 - Claude corrected itself: it first said my `.gitignore` broke the paper checklist ("`scratch/` … with nothing else ignored"), then found that Professor Stauffer's 2026-09-28 review had given full marks for those same patterns.
 - Claude caught that my salary source doesn't say what my sentence said: the page gives a national average of $44,855 (the ~$50k figure is the top state, Washington), and it's undated. I changed the number to about $45k; a stronger source is still to find.
 - Claude caught that its own Purpose paragraph in the spec was shown as my writing, and relabeled it.
+- Claude wrote a question into my PR description to Professor Stauffer as if it were mine, asking whether Claude interviewing me applies to the paper's brief and spec. I had already settled that to my satisfaction. I had it removed before the PR was opened, and it's #14 in the tracker.
 - I pushed back on needing a success criterion ("I'm curious about something"). After Claude explained that it's a reading key decided before the data, not a bet, I set the $150 line and the 30-program minimum.
 
 ## 2026-10-29 — Stage 1.2 audit: corrected inputs, Solver re-run, tolerance bands, audit findings
