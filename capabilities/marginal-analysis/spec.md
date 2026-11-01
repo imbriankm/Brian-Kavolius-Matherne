@@ -313,3 +313,9 @@ The what if tab was written as a question of curiosity about workers getting fat
 ### Finding 6: which check I trust most
 
 I think the number of beds is the decision that is being made. Therefore, if a model fits the professor's bed counts, then it is the most trustworthy measure.
+
+### Finding 7: the Farm Profit Lab comparison
+
+I think if my model mismatched the lab's model, I would know that either I've made a mistake (my model deserves scrutiny) or the lab's has an error, meaning I should scrutinize it.
+
+The lab's model stands in as a 'correct answer' that we can compare against. When the internal checks report a reasonable result, the lab's result can be used to compare against to ensure accuracy in this case.
