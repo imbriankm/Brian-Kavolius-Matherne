@@ -18,7 +18,7 @@
 
 ## Times the AI was just wrong
 
-**Count: 12** (from the prompt log and the 2026-10-29 session; earlier session transcripts were not searched for these)
+**Count: 13** (from the prompt log and the 2026-10-29 session; earlier session transcripts were not searched for these)
 
 | # | Date | What the AI got wrong |
 |---|------|-----------------------|
@@ -34,3 +34,4 @@
 | 10 | 2026-10-29 | Asked me decision 2b (wages) as if it were new, after we had already discussed it. |
 | 11 | 2026-10-29 | Called the best mix 10 carrot / 20 mesclun / 30 tomato beds. It is 10 tomato / 20 carrot / 30 mesclun. |
 | 12 | 2026-10-29 | Said the Optimizer contradicted my reason for reporting beds 26 and 37. It didn't; that claim came from the wrong mix in #11. |
+| 13 | 2026-11-01 | Misread my question about the research brief twice. I asked whether the brief is just a short paper about the paper; it answered about bullets versus prose, then about how the brief maps onto the paper. I said: "You don't understand what I'm asking." |
