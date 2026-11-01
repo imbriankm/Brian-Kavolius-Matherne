@@ -2,6 +2,49 @@
 
 A running record of meaningful AI sessions in this repository: what I asked, what the AI got wrong, and how I caught it.
 
+## 2026-10-29 — Stage 1.2 audit: corrected inputs, Solver re-run, tolerance bands, audit findings
+
+**Asked:** Continue last night's work after the workspace move, then walk me to a stopping point for Stage 1.2 so I can push for feedback.
+
+**What it did:** Found last night's session in the archive and reviewed it. Edited the saved `model.xlsx` file directly (so my Solver setups survived) to enter carrot hours as 50 ÷ 60 and the wages as season pay ÷ paid hours. Walked me through re-running Solver one step at a time: Setup 1 from two starting points, Setup 2, and the What if tab. Checked the Checks tab and the Schedules tab against the results, added `Tomato_LastPossibleProfitableBed`, `Carrot_LastPossibleProfitableBed` and `Mesclun_LastPossibleProfitableBed` to the Schedules tab (row 3), put my six audit findings into the spec as I wrote them, rewrote the capability README, and started a tally file of times I said I didn't understand and times the AI was wrong.
+
+**Who did what:** I decided that the model is the farmer's reusable tool, so it uses the exact wages (decision 2b); that bed counts must match exactly and profit within ±$500; and that the report gives both the last profitable bed and the last one inside the cap. I ran Solver myself and wrote all six audit findings. Claude edited the workbook, explained the numbers, and placed my words in the spec.
+
+**Results on the corrected inputs:** Setup 1 gives 10 tomato, 20 carrot and 30 mesclun beds and $42,762 from both starting points. Setup 2 gives 7 tomato beds and $1,626, and the Schedules tab's `Tomato_BreakEvenBeds` also says 7. The What if tab keeps the same mix, with slightly lower profit. The Checks tab shows no FAIL.
+
+**What I caught / changed:**
+
+- Claude asked me decision 2b as if it were new; I said we had already discussed it, and it found the archived session.
+- Claude's spec draft said the exact wage rate "pays me exactly $50,000." The model charges my 720 hours, which is $25,000.00. Corrected.
+- Claude's explanations of the check figures and of the carrot bed that costs less than the one before it (bed 17) lost me several times; it re-explained with the Schedules numbers until I followed.
+- Claude mislabeled the best mix as 10 carrot / 20 mesclun / 30 tomato beds and used that to say the Optimizer contradicted my reason for reporting beds 26 and 37. That was wrong. The mix is 10 tomato / 20 carrot / 30 mesclun. Checking it showed that 26 and 37 are past the caps (20 and 30), so I changed what the report says.
+- Both rounding changes (carrot hours and wages) were made after I saw the professor's check figure, and the audit says so.
+
+## 2026-10-27 — Stage 1.2 spec: Professor Stauffer's 2026-10-17 review
+
+**Asked:** Pull, help me address Professor Stauffer's feedback, then work through the next session.
+
+**What it did:** Found his review (PR #6, answering my PR #5), merged both PRs with merge commits at my request, and pulled. Fetched the case README from the course repository so I could read the labor-function sentence he pointed to. Then took his spec fixes one at a time: placed my resolution of the labor-function disagreement in the spec, wrote marginal cost in named notation (`Tomato_MC(q)` and the rest), suggested named result cells for every Output and a second Solver setup for `BreakEvenBeds`, added a memo note, and fixed "five tabs" to "six".
+
+**Who did what:** I resolved the disagreement: all beds are planted at the start of the season, so "one more bed" means planning a season with one more bed. I approved the result-cell names and the second Solver setup. Claude wrote the spec paragraph from my words and my PR #5 description, wrote the marginal cost notation and the cell names, and wrote the memo note's wording.
+
+**What I caught / changed:**
+
+- Claude first asked me Stauffer's question without explaining it, and I didn't understand it. It explained that a bed's 99 hours are spread over 36 weeks, so a second bed changes the weeks still to come, not the past.
+- Claude's marginal cost draft said each crop is costed "as if it were the only crop planted," which I thought contradicted the bug logic. Claude reworded it: that rule only decides which wage each hour is paid on the Schedules tab, and Solver costs the whole farm together.
+- I asked whether diminishing returns should cross crops. The case's formula counts each crop separately, so the main model keeps it; the point went into the Stage 3 memo notes.
+- I left the width of each check-figure band (item 5) for when the workbook runs.
+
+**Build (same session, into 2026-10-28):** Claude built `model.xlsx` from the spec and checked it in Excel (no error cells; hand checks and an independent recalculation matched). I ran Solver myself: Setup 1 from 0/0/0 and from 20/0/0 (same mix both times), Setup 2, and the What if tab, plus the zero-fatigue test and the Farm Profit Lab check on tomato bed 8. Excel's Solver misread a constraint pointing at the Inputs tab (`Mesclun_Cap` came back as `LaborCost`), so Claude copied the limits onto the Optimizer and What if tabs, pre-loaded the Solver setups, and wrote the reason into the spec.
+
+**Decisions so far:** report each crop's last profitable bed, not the first crossing (decision 1); enter carrot labor as 50 minutes a week instead of 0.833 hours (decision 2a). Still open: the wages (2b), which depends on whether the model is the farmer's reusable tool or only this case's answer.
+
+**What I caught / changed (build):**
+
+- Claude slipped back into "planting one bed at a time" language after we had settled that all beds are planted at the start of the season. It corrected the wording.
+- Claude gave me three decisions at once; I asked for one at a time with context, as we had agreed.
+- Claude told me my wage was $25,000 for 720 hours; the case says $50,000 for 1,440 paid hours, 720 of them in the field. Same hourly rate, wrong basis; it corrected itself from the case page.
+
 ## 2026-10-14 — Stage 1.2 spec: calculation logic, validation rules, What-if tab
 
 **Asked:** A status update on my projects, and help understanding the push/pull/PR workflow with Professor Stauffer. Then merge his 2026-10-12 review (PR #4) and interview me to finish the Stage 1.2 spec.
