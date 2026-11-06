@@ -2,6 +2,26 @@
 
 A running record of meaningful AI sessions in this repository: what I asked, what the AI got wrong, and how I caught it.
 
+## 2026-11-01 — Research paper: spec draft, privacy setup, brief
+
+_Claude drafted this entry from the session, including "What I caught / changed"; I checked it._
+
+**Asked:** Help me build a spec, in the style of the farm model, for finding the coaching websites for my paper, starting from my pre-research list. Then: make sure coach names can't end up in the repo, analyze Professor Stauffer's feedback on the paper, and write the brief with my Q3 answer in it.
+
+**What it did:** Drafted `capabilities/economic-research/spec.md` in the farm spec's structure, with my prewriting placed, its own suggestions marked "Proposal (Claude)", and open decisions numbered. Checked that the repo is public and that no coach name is in its history, moved `PreResearch.rtf` into `scratch/`, made a private key of program IDs (P01–P06) and a list of names to block, and wrote and tested a pre-commit check that refuses any commit containing them (I install it myself; Claude wasn't allowed to install a hook). Read the research paper page and moved the spec to the required `economic-research` path, adding planned figures, success criteria and the course rules. Read every review and PR thread for paper feedback. Set up `docs/briefs/2026-11-01-research-brief.md`, interviewed me one question at a time, and placed my answers. Opened my ZipRecruiter salary source to check my number. Committed the brief on its own, before any research.
+
+**Who did what:** I wrote every section of the brief and made every decision in the spec: artists in general, careers ("Book your next gig/client"); group, cohort, mastermind, self-paced and 1-1 programs at any price; at least 30 programs; sticker price per hour of coach time as the measure; $150 per contact hour as the overpriced line, from university lesson rates; $150–$300 for a self-paced course; "apply" pages as a separate category and a sales tactic; and my hypothesis (>50% of programs above $150 per contact hour, >50% of those using the sales tactics). Claude explained price discrimination, signaling and success criteria, proposed the spec's structure, critiqued my answers, and placed my words. The spec is still a draft and isn't committed.
+
+**What I caught / changed:**
+
+- Claude misread my question about the brief twice ("You don't understand what I'm asking"). I was asking whether the brief is a short paper about the paper. Logged as #13 in the tracker.
+- Claude gave college tuition and airline seats as examples of price discrimination on expensive goods. I argued that scholarships are money applied to the same price and that airline prices follow time and demand, and that what matters is the sticker price before modifications. That became my answer to Q1. Claude agreed outside scholarships aren't price discrimination, and kept that a school's own aid and airline fare rules are.
+- Claude corrected itself: it first said my `.gitignore` broke the paper checklist ("`scratch/` … with nothing else ignored"), then found that Professor Stauffer's 2026-09-28 review had given full marks for those same patterns.
+- Claude caught that my salary source doesn't say what my sentence said: the page gives a national average of $44,855 (the ~$50k figure is the top state, Washington), and it's undated. I changed the number to about $45k; a stronger source is still to find.
+- Claude caught that its own Purpose paragraph in the spec was shown as my writing, and relabeled it.
+- Claude wrote a question into my PR description to Professor Stauffer as if it were mine, asking whether Claude interviewing me applies to the paper's brief and spec. I had already settled that to my satisfaction. I had it removed before the PR was opened, and it's #14 in the tracker.
+- I pushed back on needing a success criterion ("I'm curious about something"). After Claude explained that it's a reading key decided before the data, not a bet, I set the $150 line and the 30-program minimum.
+
 ## 2026-10-29 — Stage 1.2 audit: corrected inputs, Solver re-run, tolerance bands, audit findings
 
 **Asked:** Continue last night's work after the workspace move, then walk me to a stopping point for Stage 1.2 so I can push for feedback.
