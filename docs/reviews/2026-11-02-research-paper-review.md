@@ -1,0 +1,15 @@
+# Brian Kavolius-Matherne — feedback, sweep of 2026-11-02
+
+Brian, thank you for opening this and asking. I read your brief and the spec draft together. The idea has firmed up a lot: "expensive" is now the sticker price per hour of coach time, against a $150 line drawn from lesson rates, with at least 30 programs. That makes the hypothesis something your data can actually prove wrong, which is what a brief is for. What follows is feedback on the plan, not on a paper draft, and the economics points are questions for you to answer in your own files.
+
+This pull request answers #9.
+
+## Research paper — feedback on your brief and spec
+
+**What I read**, on `session/2026-11-01-paper`, in full: `docs/briefs/2026-11-01-research-brief.md`, `capabilities/economic-research/spec.md` and `stauffer-ai-go-here/paper-prewriting.md`. Nothing else on the branch was opened this pass; if a file that matters is missing, reply here and name it.
+
+1. **Question 3 in `stauffer-ai-go-here/paper-prewriting.md` still reads "Not answered yet."** Your brief answers it, under "Why the expensive programs haven't been pushed out." Copy the answer across or link to the brief there, your choice.
+2. **Refunds.** Your brief says clients may not use a refund offer, "hoping to not upset or frustrate a prominent member of their field." A sales page can show whether a refund is offered. What in your sample could show whether one is used? What other reasons could keep a buyer from claiming one, and what evidence would tell your networking story apart from them? Decide which the sales pages can answer and which needs your outside research on refund behavior.
+3. **Programs that list no price.** Your spec keeps "apply / book a call" programs as a separate category, and your hypothesis is a share: more than 50% above $150 per contact hour. If those programs sit outside that share, does leaving them out tilt your sample, and which way? Your `PriceListed` field will tell you how many there are. Answer in the brief how the hypothesis treats them.
+4. **What a buyer can judge.** Your evidence list starts with "Published testimonials." Who chooses which testimonials go on a sales page? You also list "Future effects" as unseen before paying. Can a buyer judge the program even after finishing it, if a career moves a year later? If quality cannot be checked even afterward, what would a refund or an outcome-based fee be measured against? Answer that under "Why the expensive programs haven't been pushed out."
+5. **The four open decisions in `capabilities/economic-research/spec.md`.** Your spec says nothing is collected until they are made. Decision 2: would your search terms find mostly the programs you already suspect, or a fair spread? Decision 4: if messaging access or a recorded video counts as a contact hour, what happens to the price per contact hour of the programs you suspect most? Decision 6: your examples include high prices and unlisted prices; if price is in the codebook, is step 3 still independent of step 2? Decision 8: which picture would let a reader see your $150 line and both of your shares at once? Decide each before the first sales page is read.
