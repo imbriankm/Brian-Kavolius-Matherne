@@ -6,23 +6,23 @@ A running record of meaningful AI sessions in this repository: what I asked, wha
 
 ### 2026-11-08 — Claude Code: analysis, figures, memo
 
-_Claude wrote "Asked" and "What it produced" (facts only). "What I kept, changed or rejected" and the reflection are mine._
+_Claude wrote this entry from the session at my request, including "What I kept, changed or rejected"; I read and corrected it before committing. The reflection is mine._
 
 **Asked:** The status of my farm project, then help finishing Stage 3: give me the context for each question, place my answers, critique the structure after my first commit, build chart options, and set up the memo.
 
 **What it produced:** Context and workbook numbers for each worksheet question; my answers placed in the worksheet and assembled into the analysis (headings by Claude); cell citations in parentheses, added at my request; a structure critique of the committed draft (four must-fix points, four optional); eight chart options in a scratch copy of `model.xlsx`, then my two picks exported, embedded and captioned; the memo file with the template's frontmatter and headings, my words placed; tracker rows 15 and 16.
 
-**What I kept, changed or rejected:**
+**What I kept, changed or rejected:** I wrote every answer myself in chat; Claude placed them. When it pasted my asides to it into the report, I had them stripped and my retracted sentence dropped. I asked for the cell citations. I rejected its critique that two Section 4 sentences disagreed (tracker #15). After it showed that its own framing had pointed me at the temp-hour limit (#16), I rewrote my hypothesis sentence and kept my argument about what a hypothesis is for. I pushed back on its Excel to-do list; after checking the record, it withdrew most of it. I picked charts 2 and 5 before reading its recommendation, and renamed the memo's sections myself.
 
 ### 2026-11-01 — Claude Code: Stage 3 setup
 
-_Bookkeeping by Claude._
+_Claude wrote this entry at my request; I read and corrected it before committing._
 
 **Asked:** Set up Stage 3 and record audit finding 7.
 
 **What it produced:** `docs/briefs/perfect-competition-stage3.md` (a checklist of the assignment page) and `analysis/worksheet-perfect-competition.md` (the four questions with numbers pulled from `model.xlsx` and cited by cell, some marked "recalculated" for me to check); my finding 7 placed in the spec.
 
-**What I kept, changed or rejected:**
+**What I kept, changed or rejected:** I wrote finding 7 myself. I kept the worksheet as the base for my analysis and answered its questions on 2026-11-08. I didn't check the "recalculated" numbers in Excel; on 2026-11-08 Claude confirmed carrot's AVC from the saved workbook, and I cut the 14 / 20 / 30 temp-hours figure from my hypothesis paragraph.
 
 ### Reflection
 
