@@ -18,7 +18,7 @@
 
 ## Times the AI was just wrong
 
-**Count: 14** (from the prompt log and the 2026-10-29 session; earlier session transcripts were not searched for these)
+**Count: 16** (from the prompt log and the 2026-10-29 session; earlier session transcripts were not searched for these)
 
 | # | Date | What the AI got wrong |
 |---|------|-----------------------|
@@ -36,3 +36,5 @@
 | 12 | 2026-10-29 | Said the Optimizer contradicted my reason for reporting beds 26 and 37. It didn't; that claim came from the wrong mix in #11. |
 | 13 | 2026-11-01 | Misread my question about the research brief twice. I asked whether the brief is just a short paper about the paper; it answered about bullets versus prose, then about how the brief maps onto the paper. I said: "You don't understand what I'm asking." |
 | 14 | 2026-11-01 | Wrote a question into my PR description to Professor Stauffer as if it were mine (whether Claude interviewing me applies to the paper's brief and spec). I had already settled that. I said: "shame on you for asking a question for me." It was removed before the PR was opened. |
+| 15 | 2026-11-08 | In the Stage 3 structure pass, said two sentences in my Section 4 disagreed ("stopping operations" if $20,000 can't be reached, and "this season" watch price against AVC). They don't: they cover two scenarios, whether to run the farm at all and how to decide within a season already committed. I said: "It's two different thought processes for two different scenarios." Claude dropped the point. |
+| 16 | 2026-11-08 | Set up my Stage 3 hypothesis question by leading with "14 / 20 / 30 would need 7,007.7 temp hours… so 14 / 20 / 30 couldn't be staffed." That framing made the temp-hour limit look like the reason my guess failed, and my answer followed it ("when exactly labor hours would become a firm gate"). The real reason the model stops at 10 is that tomato bed 11 costs $9,390.72 against $8,800; the temp hours aren't used up at 10 / 20 / 30. |
