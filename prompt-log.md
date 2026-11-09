@@ -2,6 +2,30 @@
 
 A running record of meaningful AI sessions in this repository: what I asked, what the AI got wrong, and how I caught it.
 
+## Perfect competition — Stage 3 (analysis, memo, prompt log)
+
+### 2026-11-08 — Claude Code: analysis, figures, memo
+
+_Claude wrote "Asked" and "What it produced" (facts only). "What I kept, changed or rejected" and the reflection are mine._
+
+**Asked:** The status of my farm project, then help finishing Stage 3: give me the context for each question, place my answers, critique the structure after my first commit, build chart options, and set up the memo.
+
+**What it produced:** Context and workbook numbers for each worksheet question; my answers placed in the worksheet and assembled into the analysis (headings by Claude); cell citations in parentheses, added at my request; a structure critique of the committed draft (four must-fix points, four optional); eight chart options in a scratch copy of `model.xlsx`, then my two picks exported, embedded and captioned; the memo file with the template's frontmatter and headings, my words placed; tracker rows 15 and 16.
+
+**What I kept, changed or rejected:**
+
+### 2026-11-01 — Claude Code: Stage 3 setup
+
+_Bookkeeping by Claude._
+
+**Asked:** Set up Stage 3 and record audit finding 7.
+
+**What it produced:** `docs/briefs/perfect-competition-stage3.md` (a checklist of the assignment page) and `analysis/worksheet-perfect-competition.md` (the four questions with numbers pulled from `model.xlsx` and cited by cell, some marked "recalculated" for me to check); my finding 7 placed in the spec.
+
+**What I kept, changed or rejected:**
+
+### Reflection
+
 ## 2026-11-01 — Research paper: spec draft, privacy setup, brief
 
 _Claude drafted this entry from the session, including "What I caught / changed"; I checked it._
