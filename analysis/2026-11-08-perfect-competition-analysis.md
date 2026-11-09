@@ -8,13 +8,19 @@ The tomato beds by far earn the most revenue per bed ($8,800 against $2,094 for 
 
 The relationship between revenue, diminishing returns, and labor costs all work together to determine how many of one crop to plant.
 
-The extra cost of planting that bed exceeds the revenue it would bring in (bed 10 costs $8,248.59 against $8,800 revenue, `Schedules!F18`; bed 11 costs $9,390.72, `Schedules!F19`).
+The extra cost of planting that bed exceeds the revenue it would bring in (bed 10 costs $8,248.59 against $8,800 revenue, `Schedules!F18`; bed 11 costs $9,390.72, `Schedules!F19`; see Figure 1).
 
-<!-- Figure 1 goes here: ![Figure 1: ...](figures/<file-name>.png) -->
+![Figure 1: Tomato marginal cost against price, beds 1–12](figures/tomato-mc.png)
+
+*Figure 1: Tomato marginal cost against its $8,800 price, beds 1–12, from `Schedules!A9:A20`, `F9:F20` and `G9:G20`.*
 
 ## 2. Which constraints bind, and what would relaxing one be worth?
 
-The limits defined by the case are the hard limits. You are not allowed to plant more than 20 tomato or carrot beds, and 30 mesclun beds, or total beds (`Optimizer!F13:F16`). The temp-worker hours are also hard limits (`Optimizer!B14`). If those limits did not exist, we would plant more carrots and mesclun beds (at its cap, carrot bed 20 costs $1,688.95 against its $2,094 price, `Schedules!P28`; mesclun bed 30 costs $2,420.10 against $2,700, `Schedules!Z38`). (A fence, not economics).
+The limits defined by the case are the hard limits. You are not allowed to plant more than 20 tomato or carrot beds, and 30 mesclun beds, or total beds (`Optimizer!F13:F16`). The temp-worker hours are also hard limits (`Optimizer!B14`). If those limits did not exist, we would plant more carrots and mesclun beds (at its cap, carrot bed 20 costs $1,688.95 against its $2,094 price, `Schedules!P28`; mesclun bed 30 costs $2,420.10 against $2,700, `Schedules!Z38`; see Figure 2). (A fence, not economics).
+
+![Figure 2: Carrot and mesclun marginal cost against price](figures/carrot-mesclun-mc.png)
+
+*Figure 2: Carrot marginal cost against its $2,094 price (beds 1–30) and mesclun against its $2,700 price (beds 1–40), from `Schedules!K9:K38`, `P9:Q38`, `U9:U48` and `Z9:AA48`.*
 
 The tomato plant's 'limit' is the economics. The 11th bed doesn't make enough money to cover its costs, so we don't plant it ($9,390.72 marginal cost against $8,800 revenue, `Schedules!F19`). That's not so much a limit as it is a choice to not continue for more.
 
@@ -28,7 +34,7 @@ There is a drop in the cost of beds due to the switchover of labor. The temp wor
 - Carrots have this drop between 16 and 17 ($2,552.10 to $1,670.90, `Schedules!P24:P25`).
 - Mesclun has the drop between 13 and 14 ($2,988.40 to $2,522.58, `Schedules!Z21:Z22`).
 
-<!-- Figure 2 goes here: ![Figure 2: ...](figures/<file-name>.png) -->
+(The drops are visible in Figures 1 and 2.)
 
 The work hours didn't drop, they rose (tomato 197.7 to 231.9 hours, `Schedules!C13:C14`; carrot 60.8 to 63.5, `Schedules!M24:M25`; mesclun 60.7 to 62.1, `Schedules!W21:W22`). However, since additional hours are half the cost, the total effect is a lower cost. The marginal cost that's being tracked is the cost of all the labor put together — not just the labor cost of a single hour.
 
