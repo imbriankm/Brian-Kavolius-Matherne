@@ -4,17 +4,17 @@ Workbook: [`capabilities/marginal-analysis/model.xlsx`](../capabilities/marginal
 
 ## 1. Where does the money crop stop, and why there?
 
-The tomato beds by far earn the most revenue per bed. However, the model does not plant it all of the way to the cap, due to how the diminishing returns and labor costs affect those plants in particular.
+The tomato beds by far earn the most revenue per bed ($8,800 against $2,094 for carrot and $2,700 for mesclun, `Inputs!B6`, `Inputs!B11`, `Inputs!B16`). However, the model does not plant it all of the way to the cap, due to how the diminishing returns and labor costs affect those plants in particular.
 
 The relationship between revenue, diminishing returns, and labor costs all work together to determine how many of one crop to plant.
 
-The extra cost of planting that bed exceeds the revenue it would bring in.
+The extra cost of planting that bed exceeds the revenue it would bring in (bed 10 costs $8,248.59 against $8,800 revenue, `Schedules!F18`; bed 11 costs $9,390.72, `Schedules!F19`).
 
 <!-- Figure 1 goes here: ![Figure 1: ...](figures/<file-name>.png) -->
 
 ## 2. Which constraints bind, and what would relaxing one be worth?
 
-The limits defined by the case are the hard limits. You are not allowed to plant more than 20 tomato or carrot beds, and 30 mesclun beds, or total beds (`Optimizer!F13:F16`). The temp-worker hours are also hard limits (`Optimizer!B14`). If those limits did not exist, we would plant more carrots and mesclun beds. (A fence, not economics).
+The limits defined by the case are the hard limits. You are not allowed to plant more than 20 tomato or carrot beds, and 30 mesclun beds, or total beds (`Optimizer!F13:F16`). The temp-worker hours are also hard limits (`Optimizer!B14`). If those limits did not exist, we would plant more carrots and mesclun beds (at its cap, carrot bed 20 costs $1,688.95 against its $2,094 price, `Schedules!P28`; mesclun bed 30 costs $2,420.10 against $2,700, `Schedules!Z38`). (A fence, not economics).
 
 The tomato plant's 'limit' is the economics. The 11th bed doesn't make enough money to cover its costs, so we don't plant it ($9,390.72 marginal cost against $8,800 revenue, `Schedules!F19`). That's not so much a limit as it is a choice to not continue for more.
 
@@ -44,4 +44,4 @@ For this particular season, the farmer should pay attention to the price against
 
 ## Against my Stage 1 hypothesis
 
-My hypothesis represents awareness of the majority of economic factors at play in this case. It also highlights that I did not do mental math to determine when exactly labor hours would become a firm gate (14 / 20 / 30 would need 7,007.7 temp hours against the 5,760 limit, `Optimizer!B14`; recalculated, check in Excel). I was focused, in my mental math, on the diminishing returns of tomato plants. Even if I was right, not accounting for the labor in my prediction is what created the +4 estimation for tomatoes (I predicted 14; the model plants 10, `Optimizer!B6`). I also correctly estimated that I would want to max the other two crops. Having a correct understanding of the shape of the problem (knowing that max non-tomato crops will be planted) is helpful for the construction of a hypothesis, allowing an analysis to more effectively build a spec for a workbook. It is in this sense that the hypothesis' reasoning is what's important more than the resulting figures.
+My hypothesis represents awareness of the majority of economic factors at play in this case. I just did mental math wrong (tomato bed 11 costs $9,390.72 against $8,800, `Schedules!F19`, so the model stops at 10). I was focused, in my mental math, on the diminishing returns of tomato plants. Even if I was right, not accounting for the labor in my prediction is what created the +4 estimation for tomatoes (I predicted 14; the model plants 10, `Optimizer!B6`). I also correctly estimated that I would want to max the other two crops. Having a correct understanding of the shape of the problem (knowing that max non-tomato crops will be planted) is helpful for the construction of a hypothesis, allowing an analysis to more effectively build a spec for a workbook. It is in this sense that the hypothesis' reasoning is what's important more than the resulting figures. I think that the main reason that this exercise is helpful because of directional understanding of concepts, rather than mental math. If you could sufficiently do mental math, you'd leave the hypothesis stage behind and just start running your own solver.
