@@ -33,7 +33,67 @@ My hypothesis is that a high percentage of the programs (>50%) will have pricing
 
 1. **Seed list:** the six programs in my pre-research. The list names coaches, so it stays in `scratch/` (never committed) and is entered here only as program IDs.
 2. **Searches:** a fixed list of search terms, run on the same day, with the results looked at recorded in the search log.
-   **Proposal (Claude):** Google and the Meta Ad Library (it shows who is actively advertising, which matters for sales tactics), with terms like "music career coaching program", "musician business mastermind", "audition coaching program", "artist entrepreneurship course" and "creative career coach cohort". **Decision 2** sets the final list.
+   **Decision 2 (decided 2026-11-09):** Claude drafted the list and I chose and approved it. Terms built two ways, as is standard for a fixed search: from the words the six seed programs use for themselves (taken from their program titles and web addresses in `scratch/coaching-key.md`; no sales page was opened), and from plain words for what an artist needs, so the search can also find coaches who are not like the six.
+
+   - **From the seed list:**
+     1. audition coaching program
+     2. music career coaching program
+     3. musician mastermind group
+     4. music entrepreneurship course
+     5. accelerator program for musicians
+     6. musician launchpad program
+   - **From the need (neutral):**
+     7. music career coach
+     8. how to book more gigs coaching
+     9. freelance musician business coaching
+     10. music career consultation
+     11. artist career coach
+     12. creative entrepreneur coaching
+   - **Other kinds of artists** (Decision 1 covers artists in general):
+     13. actor career coaching
+     14. visual artist business coach
+     15. dancer career coaching
+   - **Added by me (2026-11-09):**
+     16. DJ career coach
+     17. EDM career coach
+     18. DJ business coach
+     19. EDM business coach
+   - **Second round (2026-11-09):** Claude suggested these and I chose them. Composers and film composers are my additions to that list.
+     - By kind of musician:
+       20. classical musician career coaching
+       21. jazz musician career coaching
+       22. singer-songwriter career coach
+       23. composer career coaching
+       24. film composer career coaching
+       25. film and game composer career course
+       26. independent artist coaching program
+     - By career stage:
+       27. music graduate career coaching
+       28. portfolio career musician coaching
+       29. full-time musician coaching program
+     - By what the program sells:
+       30. music teacher studio business coaching
+       31. music marketing coaching program
+       32. musician social media coaching
+       33. music booking agent course
+     - By format:
+       34. group coaching program for musicians
+       35. online course for musicians career
+       36. musician business mastermind
+     - Other artists:
+       37. photographer business coach
+       38. author career coach
+   - **Considered and dropped (2026-11-09):** mindset coach for musicians, actors, visual artists and dancers. Mindset coaching is often about confidence or performance, not careers, so it falls outside Decision 1. Also music licensing course.
+
+   **Where:** Google, in a private window while logged out so past searches don't shape the results, and the Meta Ad Library (it shows who is actively advertising, which matters for sales tactics).
+
+   **How deep:** the first 20 results for each term on Google, leaving out paid ads, and the first 20 advertisers for each term in the Meta Ad Library. Every result is written in the search log, included or excluded, with the reason.
+
+   **When:** every term on the same day.
+
+   **Seed and pitch programs:** counted in the main share, and the share is also reported without them (from `FoundVia`), so the result doesn't rest on programs I already suspected.
+
+   **The list is closed (2026-11-09):** no term is added or removed after the search runs.
 3. **Snowball:** programs named on pages already found, and pitches that I or people I know have received.
 
 4. **Outside research (decided 2026-11-01):** external research on typical customer behavior on refunds for expensive service-based products, for question 3. Not a source of programs.
@@ -57,6 +117,7 @@ One row per program. **Proposal (Claude)** for the names; the tangibles are from
 | `CaptureDate` | the day the page was read | date |
 | `Snapshot` | a saved copy of the page (PDF in `scratch/`) | — |
 | `Audience` | who the page says it's for | — |
+| `Field` | music (including DJ/EDM and composers), acting, visual art, dance, photography or writing (decided 2026-11-09) | — |
 | `Format` | one-to-one, group, cohort, mastermind, or self-paced with calls | — |
 | `PriceListed` | yes, no, or "apply / book a call" | — |
 | `Price` | the sticker price: pay-in-full, before any early-bird, scholarship, payment plan or negotiation (decided 2026-11-01: "What is the sticker price before modifications?") | USD |
@@ -67,6 +128,7 @@ One row per program. **Proposal (Claude)** for the names; the tangibles are from
 | `Community` | "Facebook groups" or other things like that | yes / no |
 | `Materials` | course materials or modules | yes / no |
 | `Refund` | none, conditional, or full | — |
+| `RefundTerms` | the refund's claim window and conditions as the page states them, or "not stated" (decided 2026-11-09, for my reason 4: "Refund terms are vague"). **Proposal (Claude):** written as short phrases (e.g. "14 days; must complete modules 1–3"), with the exact wording left in the snapshot in `scratch/`, because a long quote can be searched back to its coach | days, conditions |
 | `OutcomeFee` | any part of the fee that depends on the result | yes / no |
 | `PublishedResults` | none, testimonials only, or numbers | — |
 | `PromisedOutcome` | what clients are paying for: skills, success or a network | — |
@@ -107,6 +169,16 @@ PricePerContactHour = Price ÷ CoachContactTime
 
 **Decision 4:** what counts as a contact hour? For example: live group calls, recorded videos, office hours, messaging access ("unlimited Voxer"), and guest speakers.
 
+**Decided 2026-11-09:**
+
+- **Hot seat** (one person coached while the others watch): let's call a hot seat the same as a group call. _(I first set watching at 25% of being coached, but that let a hot-seat call earn more contact time than a plain group call of the same length, so I dropped it.)_
+- **Recorded videos** count as materials. Not coach time.
+- **Office hours** should be divided across the group members.
+- **Messaging:** any messaging access counts as one 1-1 session per week, an hour a week unless it says otherwise. _(First set for unlimited messaging only; expanded 2026-11-09 to any messaging access.)_
+- **Feedback** on submitted work: 15 minutes per piece.
+- **Guest speakers** should be treated the same as the coach.
+- **Group size not stated:** we'll have to either look at pics on the page, or look for them explaining the size of the cohort. **Proposal (Claude):** record where each group size came from (stated, or counted from a photo), so the per-hour figures can also be run without the photo counts. If neither gives a number, the "not stated" rule under Conventions applies.
+
 ### Expensive or not
 
 **Measure (decided 2026-11-01):** the sticker price per hour of coach time, using the coach contact time relationships above, is how we measure expensive.
@@ -118,6 +190,35 @@ PricePerContactHour = Price ÷ CoachContactTime
 ### Desperation language
 
 **Decision 6:** the codebook. The list of sales tactics that count as desperation or predatory language, written before any page is read for language. My examples so far: high prices that include things like "Invest in yourself," prices that aren't listed, early-bird pricing used as a sales tactic, and "applying" (decided 2026-11-01: "a marketing tactic to induce the feeling of scarcity").
+
+**Price stays out of the codebook (decided 2026-11-09):** high price itself is not the tactic; it's what step 2 measures. The code is the "invest in yourself" language, wherever it appears. Prices that aren't listed and early-bird pricing are features of the price, so they're recorded as fields in step 2 (`PriceListed`, `EarlyBird`), not as language codes. That keeps step 3 independent of step 2. Whether unlisted or early-bird programs use more of the language is then compared in the analysis.
+
+**Decision 6 (decided 2026-11-09): the codebook.** Claude drafted it and I agreed to every code. Codes 1, 2 and 11 are mine, and I chose 12 after the source check; the rest are common sales-pressure categories, checked on 2026-11-09 against two published lists: the taxonomy in Mathur et al., "Dark Patterns at Scale" (CSCW 2019; [paper](https://arxiv.org/abs/1907.07032), [category list](https://webtransparency.cs.princeton.edu/dark-patterns)), and the FTC's business-coaching case against Vision Solution Marketing ([FTC blog, 2018-05-25](https://www.ftc.gov/business-guidance/blog/2018/05/ftc-says-consumers-struck-out-deceptive-business-coaching-pitches)). The FTC's staff report "Bringing Dark Patterns to Light" (September 2022, [PDF](https://www.ftc.gov/system/files/ftc_gov/pdf/P214800%20Dark%20Patterns%20Report%209.14.2022%20-%20FINAL.pdf)) also covers false scarcity and countdown timers; its full category list is not yet checked. The example phrases are invented to show the idea. None is quoted from a real page, and no sales page was read to write them.
+
+| # | Code | Counts when the page… | Example phrase (invented) |
+|---|---|---|---|
+| 1 | `Invest` | recasts the price as an investment in yourself or your career | "the best investment you'll ever make in your career" |
+| 2 | `Apply` | makes you apply, qualify or book a call before you can buy | "apply now to see if you're a fit" |
+| 3 | `Scarcity` | says places are limited or in high demand (widened 2026-11-09, from the "high-demand message" in Mathur et al.) | "only 12 seats this round", "spots are filling fast" |
+| 4 | `Urgency` | sets a deadline or countdown to join, apart from any early-bird price | "doors close Friday at midnight" |
+| 5 | `ValueStack` | lists a "total value" far above what you pay | "a [AMOUNT] value, yours today for [AMOUNT]" |
+| 6 | `OutcomePromise` | promises an income or career result | "book your dream gigs in 90 days" |
+| 7 | `Pain` | leads with fear, struggle or shame about where you are now | "tired of being a starving artist?" |
+| 8 | `Exclusivity` | says the program is only for the serious or chosen few | "this isn't for everyone" |
+| 9 | `Pressure` | treats hesitating as a lack of commitment | "don't you want to succeed?" |
+| 10 | `RiskFree` | calls the purchase risk-free or guaranteed (checked against `RefundTerms`) | "zero risk: you're fully protected" |
+| 11 | `OriginStory` *(mine, 2026-11-09)* | tells the coach's own story of using their method to pull themselves out of a bad place, so the buyer can expect the same. A plain bio or list of credentials doesn't count | "I was broke and playing to empty rooms until I built this system" |
+| 12 | `Upsell` *(decided 2026-11-09)* | pitches a higher tier, or presents this program as a step toward a pricier one (the "advanced" program ladder in the FTC case) | "ready for more? join the VIP inner circle" |
+
+**Rules for coding:**
+
+- Each code is yes or no for each page. A page can have any number.
+- A program "uses the tactics" if it has at least one code (suspicion 2a in the brief). The count of codes per program is also reported.
+- Code what the page says, not what the coach might mean. When unsure, code no and write a note.
+- Code from the Language tab, where every price and dollar figure is replaced with [AMOUNT].
+- **Other (decided 2026-11-09):** any tactic on the page that isn't in the codebook is written in an `OtherTactic` note. Notes don't count in the test, because the codebook is fixed. They're reported as tactics the codebook didn't cover.
+- **Not coded**, because they're ordinary marketing or are already recorded as fields: testimonials (`PublishedResults`), the coach's credentials, plain descriptions of what's included, payment plans (`PlanPrice`), early-bird prices (`EarlyBird`) and unlisted prices (`PriceListed`).
+- **Pilot:** before coding the full sample, both coders code the same 5 pages and compare. Definitions can be sharpened then, but no code is added or removed after the pilot.
 
 **Proposal (Claude):** code the language from the Language tab, where the prices have been taken out, so knowing the price can't sway how a page is coded.
 
@@ -138,6 +239,13 @@ PricePerContactHour = Price ÷ CoachContactTime
 **Course rule:** at least one graph, chart or diagram that the paper's text actually uses, labeled well enough to read on its own. AI may build figures from a specification I write.
 
 **Decision 8:** which figure or figures, and what each one shows.
+
+**Decided 2026-11-09:** two figures. Both use price per contact hour on a log scale (so $100, $1,000 and $10,000 sit evenly apart and the outliers don't squash everything else), and both draw the $150 line.
+
+1. **Dot plot (Claude's idea; I chose it).** One dot per program along the price-per-contact-hour line. The $150 line is marked, and so is the median. Filled dots use at least one tactic; hollow dots use none. The share of dots right of the line is suspicion 1; the share of filled dots right of the line is suspicion 2a. Self-paced courses sit in a small separate strip against their $300 line.
+2. **Box-and-whisker plots by tactic count (my idea).** One box per group: **0 | 1–3 | 4–6 | 7 or more** tactics. Each box shows the median, the middle half of the programs and the spread, with a small mark for the mean and one dot per program laid over it. The $150 line runs across the chart. This tests suspicion 2b. **Proposal (Claude):** a group with fewer than 5 programs shows its dots only, without a box, because a box drawn from so few points is misleading.
+
+Programs with an unlisted price, and self-paced courses in figure 2, have no price per contact hour, so they're left out of the figures. Each caption says how many were left out.
 
 ## Success criteria
 
@@ -167,8 +275,11 @@ From my Purpose and Professor Stauffer's questions. **Proposal (Claude)** for th
 
 - Are the programs overpriced?
   - `OverpricedShare`: the share of programs above $150 per contact hour, or above the textbook line for self-paced courses.
+  - **By field (decided 2026-11-09):** the main test uses all fields against the $150 line. The share is also reported for music alone.
+  - `MedianPerContactHour` and `MeanPerContactHour`. The test uses the median, because I anticipate many outliers; the mean is still calculated, and outliers are not removed (decided 2026-11-09).
 - Do the overpriced programs use desperation language?
   - The share of overpriced and of not-overpriced programs that use each tactic in the codebook.
+  - The median price per contact hour of the programs that use at least one tactic, and of the programs that use none (decided 2026-11-09).
 - What can a buyer know before paying? (Question 2)
   - The share of programs that list their price, their contact hours and their group size.
 - Why haven't refunds, outcome-based fees or published results pushed the expensive programs out? (Question 3)
