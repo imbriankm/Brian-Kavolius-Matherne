@@ -2,6 +2,24 @@
 
 A running record of meaningful AI sessions in this repository: what I asked, what the AI got wrong, and how I caught it.
 
+## 2026-11-09 — Research paper: answers to the five review points
+
+_Claude drafted this entry from the session, including "What I caught / changed", at my request._
+
+**Asked:** Where the repo stands for class, and whether to work on the paper or wait for Professor Stauffer. Then: work through his five research paper points (review PR #10) one step at a time, expand my search terms and my codebook for me to approve, check the codebook against published sources on high-pressure sales, and commit and open a PR tagging him.
+
+**What it did:** Checked the PRs and found the five points were mine to answer. Cut `session/2026-11-09-paper` from `main`. Linked Q3 in `stauffer-ai-go-here/paper-prewriting.md` to the brief. For each point, laid out the context and Stauffer's question, then placed my paragraphs in `docs/briefs/2026-11-01-research-brief.md`, leaving out lines addressed to Claude and listing typos for me to fix. Expanded my seed list into search terms (from the seed programs' titles and web addresses; no sales page opened) and added neutral terms. Expanded my tactic examples into a codebook with invented example phrases. Both were marked "Proposal (Claude)" until I approved them. Searched for published sources and checked the codebook against Mathur et al., "Dark Patterns at Scale" (2019), and the FTC's 2018 business-coaching case against Vision Solution Marketing, replacing an unverified Cialdini reference. Added `RefundTerms`, `Field` and the median, mean and by-field outputs to `capabilities/economic-research/spec.md`. Committed in two commits and opened PR #12 tagging Professor Stauffer, left open.
+
+**Who did what:** I wrote every answer in the brief and made every decision in the spec. The search terms started from my six seed programs, and I added the composer, film composer, DJ and EDM terms. The codebook started from my examples: "Invest in yourself," unlisted prices, early-bird pricing and "applying." I added `OriginStory` and chose `Upsell`. I imagined the second figure, a chart of box-and-whisker plots by tactic count, before I knew it existed; Claude gave it its name. I also decided: refunds as a possible sales tactic, the four reasons a buyer may not claim one, and the order of the steps; unlisted programs as their own group, with my hunch that they cost more; the median test against $150; testimonials as reports of what clients felt, chosen by the coach; and all the contact-hour rules. Claude explained the arithmetic and standard practice, expanded the search terms and codebook, proposed the dot plot, and placed my words.
+
+**What I caught / changed:**
+
+- **Refunds:** Claude framed outside research on refund rates as a way to tell my networking reason apart from other reasons. I said it had the reasoning backwards: first see whether refunds are offered, then find out how often refunds are used for expensive services in general, and leave the "why" for last, because it's speculation.
+- **Testimonials:** Claude asked me to soften "This can be demonstrated by the lack of negative testimonials." I kept it. If coaches pick the testimonials, and every one on the page is positive, then coaches pick only positive ones. That doesn't claim negative testimonials exist anywhere else.
+- **Sample size:** Claude called 30 programs my sample. Thirty is my minimum; I want as many programs as the search finds.
+- **Coder disagreement:** Claude gave "you and me disagreeing" as a reason to keep the codebook short. I said that isn't a reason to change the method. Disagreement between coders is measured and reported, not avoided.
+- **Hot seat:** I first counted watching someone else be coached at 25% of being coached yourself. Claude showed that this let a hot-seat call earn more contact time than a plain group call of the same length (22.5 minutes against 10 in a 60-minute call with 6 people), so I counted a hot seat the same as a group call.
+
 ## 2026-11-01 — Research paper: spec draft, privacy setup, brief
 
 _Claude drafted this entry from the session, including "What I caught / changed"; I checked it._
