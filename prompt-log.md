@@ -2,6 +2,35 @@
 
 A running record of meaningful AI sessions in this repository: what I asked, what the AI got wrong, and how I caught it.
 
+## Perfect competition — Stage 3 (analysis, memo, prompt log)
+
+### 2026-11-08 — Claude Code: analysis, figures, memo
+
+_Claude wrote this entry from the session at my request, including "What I kept, changed or rejected"; I read and corrected it before committing. The reflection is mine._
+
+**Asked:** The status of my farm project, then help finishing Stage 3: give me the context for each question, place my answers, critique the structure after my first commit, build chart options, and set up the memo.
+
+**What it produced:** Context and workbook numbers for each worksheet question; my answers placed in the worksheet and assembled into the analysis (headings by Claude); cell citations in parentheses, added at my request; a structure critique of the committed draft (four must-fix points, four optional); eight chart options in a scratch copy of `model.xlsx`, then my two picks exported, embedded and captioned; the memo file with the template's frontmatter and headings, my words placed; tracker rows 15 and 16.
+
+**What I kept, changed or rejected:** I wrote every answer myself in chat; Claude placed them. When it pasted my asides to it into the report, I had them stripped and my retracted sentence dropped. I asked for the cell citations. I rejected its critique that two Section 4 sentences disagreed (tracker #15). After it showed that its own framing had pointed me at the temp-hour limit (#16), I rewrote my hypothesis sentence and kept my argument about what a hypothesis is for. I pushed back on its Excel to-do list; after checking the record, it withdrew most of it. I picked charts 2 and 5 before reading its recommendation, and renamed the memo's sections myself.
+
+### 2026-11-01 — Claude Code: Stage 3 setup
+
+_Claude wrote this entry at my request; I read and corrected it before committing._
+
+**Asked:** Set up Stage 3 and record audit finding 7.
+
+**What it produced:** `docs/briefs/perfect-competition-stage3.md` (a checklist of the assignment page) and `analysis/worksheet-perfect-competition.md` (the four questions with numbers pulled from `model.xlsx` and cited by cell, some marked "recalculated" for me to check); my finding 7 placed in the spec.
+
+**What I kept, changed or rejected:** I wrote finding 7 myself. I kept the worksheet as the base for my analysis and answered its questions on 2026-11-08. I didn't check the "recalculated" numbers in Excel; on 2026-11-08 Claude confirmed carrot's AVC from the saved workbook, and I cut the 14 / 20 / 30 temp-hours figure from my hypothesis paragraph.
+
+### Reflection
+This project has been the main thing responsible for my increase of AI skills over the past few months. I was "pro back end AI" before, but was consistently dissapointed by the available options. Since I've started, AI has helped me organize and plan my ticket outreach for the recent show I had (which sold out), reducing my stress during one of my least favorite parts of my career.
+
+As for economics, I am not so sure that this project has had as great of an impact on my knowledge. I was sometimes guilty of letting the AI "Take over". Interviewing was a great way to make doing the project painless AND still make sure that what was produced was mine. By stage three, I think I lost some awareness of the project in a macro sense. This pairs directly with my working with my computer directly within a chat, like Star Trek speaking to the computer.
+
+This is not too dangerous of a situation for a school project or for something I know forwards and backwards, like my musical work. I can see a situation where someone gives increasingly more awareness to an AI at the cost of not being familiar with the work themselves. I asked for help on how to verify that my solver was working appropriately (that tomatoes would indeed become less than profitable at 11 beds), and it would explain "Go here and look at the results of this formula- it should be X". I would go and look, and see X. I'd think it was reasonable, and move on. Without greater understanding of the material (math, in this case), I don't have much choice but to do what it suggests and just try to observe. A sufficiently clever misalined bot could trick me. 
+
 ## 2026-11-01 — Research paper: spec draft, privacy setup, brief
 
 _Claude drafted this entry from the session, including "What I caught / changed"; I checked it._
