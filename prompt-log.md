@@ -25,6 +25,11 @@ _Claude wrote this entry at my request; I read and corrected it before committin
 **What I kept, changed or rejected:** I wrote finding 7 myself. I kept the worksheet as the base for my analysis and answered its questions on 2026-11-08. I didn't check the "recalculated" numbers in Excel; on 2026-11-08 Claude confirmed carrot's AVC from the saved workbook, and I cut the 14 / 20 / 30 temp-hours figure from my hypothesis paragraph.
 
 ### Reflection
+This project has been the main thing responsible for my increase of AI skills over the past few months. I was "pro back end AI" before, but was consistently dissapointed by the available options. Since I've started, AI has helped me organize and plan my ticket outreach for the recent show I had (which sold out), reducing my stress during one of my least favorite parts of my career.
+
+As for economics, I am not so sure that this project has had as great of an impact on my knowledge. I was sometimes guilty of letting the AI "Take over". Interviewing was a great way to make doing the project painless AND still make sure that what was produced was mine. By stage three, I think I lost some awareness of the project in a macro sense. This pairs directly with my working with my computer directly within a chat, like Star Trek speaking to the computer.
+
+This is not too dangerous of a situation for a school project or for something I know forwards and backwards, like my musical work. I can see a situation where someone gives increasingly more awareness to an AI at the cost of not being familiar with the work themselves. I asked for help on how to verify that my solver was working appropriately (that tomatoes would indeed become less than profitable at 11 beds), and it would explain "Go here and look at the results of this formula- it should be X". I would go and look, and see X. I'd think it was reasonable, and move on. Without greater understanding of the material (math, in this case), I don't have much choice but to do what it suggests and just try to observe. A sufficiently clever misalined bot could trick me. 
 
 ## 2026-11-01 — Research paper: spec draft, privacy setup, brief
 
