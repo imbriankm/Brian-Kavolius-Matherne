@@ -64,6 +64,25 @@ Part of this research will be to determine if coaches do use refunds, outcome ba
 
 For the refunds, I could likely do some external research on typical customer behavior on refunds for expensive service based products. I'm sure someone has researched this.
 
+I don't think it's possible, in a school project, to identify who is doing refunds. This is similar to my accounting class where we used financial accounting to understand a company. Of course, we could use managerial accounting to learn more, but those files are restricted. This is a similar problem for the coaching programs. I would expect that perhaps the existence of a refund is a sales tactic in itself.
+
+IF we see refunds being offered, then it's important to understand how many expensive services business have refunds being used. Our "why" is speculation to try to explain, and is therefore the last step.
+
+If research shows that small amount (<10%\*) of customers ask for refunds for expensive service based products, then we may be able to make an assumption that suggests that these products experience similar rates.
+
+The reasons someone may NOT request a refund, when they are unsatisfied, MAY be the following:
+
+1. They may hold out for the plan to 'work'
+2. They may be fearful of the networking implication of asking for a refund
+3. The coach may respond with more aggressive sales tactics "Don't you want to succeed?"
+4. Refund terms are vague.
+
+A testimonial doesn't have to address if the career was helped by the coach. They only need to report on if they FELT that the career was/could be helped by the coach.
+
+Measuring a program's potential success is valuable to the potential buyer. To do this, customers can use testimonials, referrals, and program details to gather information that they need to guess at a program's effectiveness. Testimonials are likely selected by the coach, or one of their staff members, and are only posted if the testimonial is positive. This can be demonstrated by the lack of negative testimonials present on each website. Since career success is ultimately up to the customer, it can be difficult, if not impossible, to distinguish the program effectiveness against the customer's own efforts. Understanding this, any refund would have to be based on client desire, rather than a measurable goal. The research will test this.
+
+\* I invented this number with no research or knowledge whatsoever.
+
 ## Desperation pricing or ordinary price discrimination?
 
 _Professor Stauffer's Q1 asks what the price data would have to show to tell desperation pricing apart from pricing on what's delivered and from ordinary price discrimination. My answer so far covers what's delivered (coach contact time) but not price discrimination._
@@ -80,9 +99,19 @@ I think "applying" is a marketing tactic to induce the feeling of scarcity. They
 
 My hypothesis is that a high percentage of the programs (>50%) will have pricing that exceeds the $150 line. I think, that out of those programs >50% will use the sales tactics as described.
 
+The most reasonable approach to programs that don't have listed prices would be to separate them into their own category. In that "sequestered" location, it will be interesting to see if any sales tactics are similar to, or different from, the other programs that do have listed prices.
+
+It's very reasonable for a program to both require an application AND to not list a price. Therefore, it could be true that program owners are using both applications and unlisted prices as sales tactics.
+
+My hypothesis is that the unlisted programs would cost more.
+
 ## How I would know I was wrong
 
 I'm not saying anything for sure. I'm saying that I'm suspicious that these programs may be highly priced. That's a suspicion, not a statement.
+
+1. **The programs are priced high.** If the median price per contact hour is above $150, then my suspicion would be supported. If less, then it would be refuted in part. I anticipate many outliers. Although, we should not remove outliers, median is better in that sense. We will still calculate the mean.
+2. **The expensive programs use the sales tactics.** Same as the central tendency. I suspect both of these things: _(Claude's wording, from my answers: (a) more than 50% of the programs above the $150 line use at least one tactic; (b) the programs that use the tactics have a higher median price per contact hour than the programs that don't.)_
+3. **The unlisted programs cost more.** I will not be able to test this one.
 
 Expensive is measured as the sticker price per hour of coach time. If coaching programs have inflated beyond $150 per contact hour, then we can think they're overpriced. $150 comes from university lessons. My understanding of industry standards is that a lesson with a great player (music), is between $85 and $130. The research will work if we find 30 programs at least.
 

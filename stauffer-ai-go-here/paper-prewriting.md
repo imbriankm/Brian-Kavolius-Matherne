@@ -63,7 +63,7 @@ Their evidence could be:
 
 **3. If buyers can't judge quality in advance, why haven't refund guarantees, outcome-based fees or published client results pushed the expensive programs out? What would your sales-page sample tell you about that?**
 
-_Not answered yet._
+Answered in my research brief: [Why the expensive programs haven't been pushed out](../docs/briefs/2026-11-01-research-brief.md#why-the-expensive-programs-havent-been-pushed-out).
 
 **4. Cohort programs spread one coach's hours over more students. How will you measure what each student actually gets for the price?**
 
