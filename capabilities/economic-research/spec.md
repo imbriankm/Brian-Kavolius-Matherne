@@ -222,6 +222,45 @@ PricePerContactHour = Price ÷ CoachContactTime
 
 **Proposal (Claude):** code the language from the Language tab, where the prices have been taken out, so knowing the price can't sway how a page is coded.
 
+**Sharpened after the pilot (2026-11-21).** Both coders coded the same 5 pilot pages and agreed on 46 of 60 code decisions (Cohen's kappa 0.52). These sharpen the definitions once, as the pilot rule allows; no code is added or removed. The pilot codes stay as they were for the agreement report.
+
+**How disagreements are settled (decided 2026-11-21):** I think this is the right method: we'll discuss the disagreements until we reach alignment. **Proposal (Claude):** the agreement figure is reported as it was before discussion (46 of 60), and the codes agreed in discussion are the codes of record for the 5 pilot pages.
+
+- **`Apply`:** I felt that encouragement to call counted, because that opens up an avenue for more sales. So the code counts when the page makes you apply, qualify or book a call before you can buy, **and also when it encourages you to book a call or apply, even if you could buy without one.**
+- **`Pain`:** "leads with" isn't right because it's not clear. We need "anywhere in the page." So the code counts when the page states fear, struggle or shame about where the buyer is now, anywhere in the page. We don't mind where each code appears.
+- **`OriginStory`:** **Proposal (Claude), from the L-P125 discussion:** the "bad place" includes doubt or struggle in the coach's own career (feeling like the odd one out, not knowing if the work will add up), not only a crisis such as debt. The code needs the whole arc: the coach's struggle, what got them out, and the offer that the buyer can do the same. A success story with no struggle before it is a bio.
+  - **Round 2 (2026-11-21), loosened:** naming the past struggle counts as origin story I think. I understand that this code blends with pain a little bit, but this isn't an exact science. So the code counts when the coach names their own past struggle of the kind the buyer is in (for example "self-doubt, all of it," L-P186), even without telling how they got out. A success story with no struggle in it is still a bio.
+- **`ValueStack`:** I think the big thing is that it has to be a bundle with a PRODUCT. Teachers who offer a number of lessons for a discount over one lesson aren't being predatory. So the code counts when the page claims a "total value" above the price, or sells a bundle that includes a product (a course, materials, an eBook) as worth more together. A package of sessions or lessons sold at a discount over one session does not count.
+- **`Scarcity` (round 2, 2026-11-21):** a group-size cap stated as a feature of the format ("a maximum of 12 participants," so you get more attention) does not count. A statement or counter that places are limited or running out does, including a booking page's automatic "spots left" counter. I think the word "left" is the thing that's setting me off. _(Claude's wording of the reason, which I agreed with: "left" tells the buyer places are being used up, the "low-stock message" in Mathur et al.'s Scarcity category; the counter counts even if the booking software shows it automatically, because we code what the page says, not what the coach might mean.)_
+- **`Exclusivity`:** "high performing" and "isn't for beginners" is the most exclusive. So an entry bar the buyer must meet (a level of success or years of experience) counts, as well as "this isn't for everyone" language.
+- **`Urgency`:** "act fast" and "limited time" were plenty for urgency for me. So undated wording that tells the buyer to act fast, or that the offer is for a limited time, counts as well as a dated deadline or countdown, even when it is tied to a discount. The early-bird price is still recorded in the `EarlyBird` field.
+- **`Pressure`:** choosing to continue failing is enough for pressure. So the code counts when the page frames not buying, or waiting, as choosing to keep failing or stay stuck, as well as when it treats hesitating as a lack of commitment.
+  - **Round 2 (2026-11-21):** yes, I think saying it's impossible to reach the next level on your own is pressure (L-P84). A claim that the buyer can't succeed without the program counts.
+- **`OutcomePromise`:** settled on L-P270 that a general claim about what the program gives you ("the tools you need to start or re-start your business") is not a promise of an income or career result. I was being far too firm.
+  - **Round 2 (2026-11-21):** "aims to" and a "chance" at a collab aren't promises (L-P84, no). A page teaching "a reliable way to make consistent income" does promise an income result (L-P149, yes). I think the disclaimers being in several places outweigh a single claim of selling more (L-P186, no). "Every time" is enough to make an offer of help a promise (L-P274, yes: being paid on time, every time).
+  - **Reliability (decided 2026-11-21):** OutcomePromise agreed on only 5 of 10 pages across the two rounds, the lowest of any code. Yes, we'll flag it. Claude proposed and I accepted: the code stays (no code is removed after the pilot), but it is flagged in the paper as the least reliable; the main test (a program uses at least one tactic) is also run without it; and OutcomePromise close calls come to me first in the full run.
+- **`RiskFree`:** unchanged. A money-back guarantee, including a "double money-back guarantee," counts. A free call or free first session before buying does not.
+- **`Upsell`:** settled on L-P348 that paid add-on services ("add on done-for-you services") and a sister company selling more services count. **Proposal (Claude):** a price-blind coder judges by the wording, not the price: an add-on, a "next level" or a bigger package counts; a sibling product offered side by side, with nothing saying it is more or further, does not.
+
+All 14 pilot disagreements were settled this way: 8 to my original code, 6 to Claude's coder's.
+
+**Rounds (decided 2026-11-21):** what if we called this "one round" of testing/improvement/training, and then we do another 5? If the agreement number increases, we know we're directionally right. Things that I "missed," like the guarantee, we know are aligned, because the AI should be more thorough at text searching than me.
+
+**Proposal (Claude):**
+
+- **Round 2:** the next 5 pages of my blind order (rows 6–10). Claude's coder (the model that will run the full coding) codes them from the sharpened definitions, sealed, before it sees my codes.
+- **Misses vs. judgment calls:** each disagreement is sorted as a miss (one coder overlooked text that fits the definition) or a judgment call (both saw it and read it differently). For every yes, the coder gives its evidence, and a script checks that the quoted words are really on the page, so a claimed miss can be verified, not assumed. Agreement is reported raw and with misses set aside.
+- **Measuring a round (decided 2026-11-21):** we might need a new way to measure success here than kappa. Claude proposed and I accepted: the training measure is the number of judgment disagreements per round (disagreements that are not misses or rule errors), because that is what sharpening the definitions should shrink. Raw agreement, kappa and agreement on yes codes are still reported, with raw agreement shown beside what a coder would get by marking every code "no," so a reader can judge it.
+- **When the coder is aligned (decided 2026-11-21):** if we can get to a point where I'm saying "Yes, you're right, I missed that" rather than pointing something out to the model during disagreements, then it's right. We should assume that the AI is more thorough, but that I know more about what I'm talking about. This is why we'll have the close call method.
+- **Head coder (2026-11-21):** I think the difference is that the Fable coder does have the option to opt out of a choice by saying it's a budget [close] call and letting me do it. There really is only one head coder: me. **Proposal (Claude):** so the agreement that matters is on the codes the AI coder was sure of (pilot 32 of 37, 86%; round 2 29 of 33, 88%); its close calls come to me. Because it flagged 23 and 27 close calls in the two rounds (about 5 per page), the full run would produce far more than I can review, so the coder also rates each close call "close" or "very close," and I review the very close ones first, in the priority order below, up to the cap.
+- **Wrong or incomplete pages (raised 2026-11-21):** I think this one is unfinished. This has happened a number of times. We may need a way to let the agent find more language if it's landed on the wrong page. **Proposal (Claude):** four of the first 13 coded pages had a capture or page-choice problem (FAQ answers not saved, packages described off-site twice, and a short "program specifics" page coded instead of the coach's main coaching page). Before the full run: (1) a page-choice audit of every site where another saved page on the same site names the same program with more text; (2) the 14 near-empty saves and a random 10 of the off-site cases, as planned. In the full run, the coder flags any page that looks incomplete or like the wrong page, with its reason, and that page is fixed and re-coded before its codes are used.
+- **Close calls both coders flag (raised 2026-11-21):** if we agree on a close call, that's an agree? (I see a few problems with this.) **Proposal (Claude):** agreement is still counted on the codes themselves. When both coders mark the same code on the same page as a close call, that is recorded separately as a sign the code is grey there, and it feeds the grey-area score, not the agreement figure.
+- **Stopping rule (set 2026-11-21, before round 3 was coded):** Claude proposed it and I went ahead with it: round 3 is the last blind round. Leaving OutcomePromise aside, if I correct the coder on no more disagreements than I concede ("yes, I missed that"), the coder is aligned. Either way the rounds stop there, and remaining grey cases go to the close-call review.
+- **Result of round 3 (2026-11-21):** raw agreement 82% (pilot 77%, round 2 80%), kappa 0.57, and agreement on the codes the AI coder was sure of 92% (86%, 88%). Of 11 disagreements, 8 were the coder's close calls and 3 were confident calls; on those three, I think Fable is right on all of these. By the stopping rule, the coder is aligned and the blind rounds are done.
+- **Reading the result:** directional improvement means our training process works, not that we're "there." The agreement of the latest round is the figure the paper reports for the coding. If a round sharpens a definition again, another round of 5 pages follows on the same terms.
+- **Page length (raised 2026-11-21):** I wonder if length of these pages should count? **Proposal (Claude):** record each page's length in words (from the price-blind text, so no price is seen) and report it in the analysis. A longer page has more room for tactics, so the tactic count partly measures length. The test of suspicion 2b is also run with tactics per 1,000 words, and the correlation between page length and price per contact hour is reported.
+- **Close calls in the full run:** reviewed in this order: first those that would change whether a page uses any tactic at all, then those on the codes with the lowest agreement. How many I review is decided once the count is known; the rest keep the coder's answer, and the number is reported.
+
 ## Conventions
 
 - **Planning for the data (decided 2026-11-01):** we don't know what data we'll have yet, so we shouldn't count on it. We just need to build a system and idea that works for the data that we HOPE to get, with plans to adjust later.
@@ -233,6 +272,67 @@ PricePerContactHour = Price ÷ CoachContactTime
   - **Research emails:** I'll decide about emailing them later (I'm leaning not). **Proposal (Claude), if I do:** I write and send them myself, and say it's for research, not pose as a buyer.
   - A price that's never found is recorded as unlisted, not guessed.
 - **Unclear numbers:** **Proposal (Claude):** when a page gives a range (a group "of 8 to 12," calls "up to 90 minutes"), record both ends and run the analysis both ways. If the answer only holds at one end, that's a finding. When a page gives no number at all, the program is left out of the per-hour figures and counted as "not stated," which is itself an answer to question 2.
+
+## Run rules added before the search (2026-11-10)
+
+_Added after the green light and before the first search or sales page._
+
+**Decided 2026-11-10** (Claude offered two options for each; I chose):
+
+- **Who sells it:** independent coaches only. Career courses sold by universities, course marketplaces (for example Udemy or Skillshare) and nonprofits are written in the search log as excluded, with the reason.
+- **Tiers:** each package is a program. One row per priced package, with a `CoachID` (C01, C02, …) on every row, so the share can also be counted once per coach.
+- **My order:** I code the language first and confirm the live pages after. Claude holds back every price result until my coding is done.
+
+**Decided 2026-11-21:** how the run fills gaps the spec leaves open. Claude proposed these; I accepted all eight. Found twice, the home page/blog rule and snowball were unclear to me, but I think they're OK.
+
+- **Independent coach:** a person or a coaching business selling from its own site. A coach's course that is sold only through a marketplace is excluded as marketplace.
+- **Google:** run in Claude's built-in browser, which is logged out and has no search history, in English, from Honolulu. "The first 20 results" means the unpaid results on Google's first two pages. Google hides each result's full address behind a redirect, so the log records the address as Google displays it.
+- **Meta Ad Library:** country United States, active ads, all ad types, in Meta's default order, taking the first 20 different advertisers for each term.
+- **Found twice:** one row. `FoundVia` is the first place it was found, and every sighting stays in the search log.
+- **Not a sales page:** when a result is a coach's home page or blog post, the run follows it to the sales page on the same site.
+- **Snowball:** one step only, from included program pages. Programs named in "best of" articles are not followed, because the search list is closed.
+- **Currency:** a price is recorded in the currency on the page and converted to US dollars at the capture date's rate, with the rate's source noted.
+- **What is committed:** the full sales text stays in `scratch/`, because any sentence of it can be searched back to its coach. The committed Language tab holds the codes and short notes. The committed Search log holds a result number, the kind of site, included or excluded, the reason and the `ProgramID`; the log with addresses stays in `scratch/`.
+
+**How the run was done (Claude, 2026-11-10):**
+
+- **Group size from photos:** not counted in this run. Those rows are marked "needs photo check" for my confirm pass.
+- **Two agents:** the Claude agent that records prices and the Claude agent that codes language are separate. The coder is given only the text with prices taken out.
+
+## Division of work (decided 2026-11-21)
+
+I want AI to help me with:
+
+- Data collection
+- Data analysis
+- Correlations
+- Excel work (graphs/charts)
+
+I want to write the rest.
+
+**Proposal (Claude):** what that changes in this spec. These replace "My order" in the run rules above and the "Second coder" validation rule.
+
+- **My coding:** I code 30 pages blind, before I see any price or any of Claude's codes: the 5 pilot pages first, then 25 drawn at random (`scratch/coding/blind-draw.txt`), in that order. I may stop after 20; the pages done are still a random sample.
+- **Names hidden too (2026-11-21):** I think we need to find a way to blind the names from testimonials. **Proposal (Claude):** every person's name on the page (testimonial givers, clients, guests and the coach) and any business name or web address built from one is replaced with [NAME], the same way prices are replaced with [AMOUNT]. Both coders code from the same name-masked text. Claude's sealed pilot coding of the 5 pilot pages was done before names were masked, which the agreement report says.
+- **Claude's coding:** Claude's coder, a separate agent that sees only the text with prices taken out, codes all 256 pages. My codes are the codes of record on the pages I coded, and Claude's on the rest. The agreement between us on my pages is reported. The pilot rule still holds: definitions can be sharpened once after the 5 pilot pages, and no code is added or removed.
+- **Close calls:** on the pages I don't code, Claude's coder marks the codes it was unsure of, with the sentence that triggered each, and I decide them.
+- **Prices:** unsealed to me once my blind coding is done.
+- **Group size from photos:** if there's no photo, we can't get the data. If there are photos, Claude shows them to me and I say how many people are in the group. This covers every program whose group size isn't stated; the source is recorded as "photo," so the per-hour figures can be run with and without them. **Proposal (Claude):** Claude shows only photos cropped from the page, with no price in view, and I decide whether a photo shows the session at all.
+- **Confirming the data:** I check 10 random rows against the live pages, check every number the paper uses against the workbook, and hand-check one `CoachContactTime`. Each check is logged in `prompt-log.md`.
+- **What stays mine:** what the numbers mean, the implications, the recommendation and all the prose.
+
+## Method as run
+
+_Record (Claude), for me to check: each step actually taken, in order, with its date. The paper's method section draws on this list. New steps are added as they happen._
+
+1. **Search (2026-11-10):** all 38 terms run on Google and the Meta Ad Library on the same day. 1,032 results logged, each included or excluded with a reason.
+2. **Collection (2026-11-10):** 245 candidate sites read by Claude agents against written rules. 150 coaches included, 95 sites excluded with a reason, giving 365 packages. A copy of every page read was saved in `scratch/`.
+3. **Price audit (2026-11-10):** every recorded price checked against the saved page text, and 15 random packages re-checked by a separate agent. Three records corrected.
+4. **Archive lookup (2026-11-10):** the Wayback Machine checked for the 88 packages with no listed price. 4 had a dated archived price, kept apart from current prices.
+5. **Price masking (2026-11-10):** every price and money figure in the sales text replaced with [AMOUNT], giving 256 price-blind pages. A scan finds no currency figure left.
+6. **Name masking (2026-11-21):** at my request, every person's name on the 30 pages I code blind (testimonial givers, clients, guests and the coach), and any business name or web address built from one, replaced with [NAME]. A Claude agent listed the names, a script replaced them (720 replacements), and a scan found none of the 928 private names or sites left and no dollar figure. Famous people mentioned only as references were left in. The other 226 pages are masked the same way before Claude's coder codes them.
+7. **FAQ answers re-captured (2026-11-21):** while coding blind, I found that one page's FAQ answers were missing from its text. The saved copies held only what was on the page when it loaded, so FAQ answers that load only when a question is clicked open came out empty. Claude re-opened that page and the 5 other blind pages flagged as possibly affected, clicked every FAQ open, and kept only text not already in the saved copy. One page gained 8 FAQ answers; the other 5 had nothing missing (their answers were already saved, or the "questions" were rhetorical). The added text is masked for prices and names like the rest, marked with its own capture date, and appended to the page. Empty FAQ answers of this kind are on 3 saved pages, all from one site; the others are re-captured the same way before the full coding run.
+8. **Off-site package pages (2026-11-21):** while coding blind, I questioned whether the right sales page was selected for one coach, whose packages are each described on a booking service rather than on the coach's own site. The run rule followed links only within the same site, so those pages were never saved. Claude opened the booking pages for the page's recorded packages and appended their descriptions to the coding text, masked and marked with their capture date. The coach's group workshop page, which had saved empty on 2026-11-10, now says the workshop is no longer available, so it stays unrecorded. The same was done on 2026-11-21 for a second coach whose workshops are booked off-site: 2 of 4 booking pages were still live and their descriptions were appended; the other 2 were no longer bookable. On 2026-11-21 a third case: the page coded for one coach was a short "program specifics" page, while the coach's main coaching page for the same program had been saved the same day (2026-11-10) but filed as a secondary page. Its text was masked and appended, with no new visit to the site. Before the full coding run, Claude checks the 14 saved pages that came out nearly empty and a random 10 of the 73 included sites whose sales page links to a booking, checkout or enroll page elsewhere, to see whether this is a one-off.
 
 ## Planned figures
 
