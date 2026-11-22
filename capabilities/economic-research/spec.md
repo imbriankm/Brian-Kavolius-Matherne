@@ -365,7 +365,7 @@ _Record (Claude), for me to check: each step actually taken, in order, with its 
 
 ## Analysis plan, fixed before prices are revealed
 
-**Proposal (Claude), written 2026-11-22 before unsealing,** for me to accept or change before any price is seen. It gathers what earlier sections decided and adds the statistical tests, which were not yet specified.
+**Accepted 2026-11-22, before unsealing.** Claude wrote it; I accepted the plan as written. It gathers what earlier sections decided and adds the statistical tests, which were not yet specified.
 
 - **Unit:** each priced package is a program (run rules). Its language codes are those of the sales page it is sold on. Results are also shown counting each coach once.
 - **Hypothesis 1:** the share of programs above $150 per contact hour and the median price per contact hour, compared with $150; the mean is also reported and outliers stay in. Self-paced courses are judged against the $300 line separately. Music-only shares are also reported.
