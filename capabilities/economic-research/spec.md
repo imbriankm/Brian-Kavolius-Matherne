@@ -360,6 +360,23 @@ _Record (Claude), for me to check: each step actually taken, in order, with its 
 - **Incomplete captures:** fixed where possible (the FAQ answers that did not open, a description cut off mid-sentence), then re-coded.
 - **All other flagged pages** (several offers on one page, mixed-in text, closed enrollment) stay in, and the main results are also run without them as a check.
 
+- **Group size from photos (done 2026-11-22, before prices were seen):** 1,107 large images from the sales pages of the 109 programs with no stated group size were screened by AI agents for group sessions, with any image showing a price removed. I counted people in the 32 photos left. Yes, we should ignore the partials: each program's group size runs at the smallest and the largest full-group count, and partial or event photos (and one photo of children) are not used. Group sizes from photos: 17 programs. The other 92 stay "not stated." One screened "photo" turned out to be an icon (an AI screening error).
+
+
+## Analysis plan, fixed before prices are revealed
+
+**Proposal (Claude), written 2026-11-22 before unsealing,** for me to accept or change before any price is seen. It gathers what earlier sections decided and adds the statistical tests, which were not yet specified.
+
+- **Unit:** each priced package is a program (run rules). Its language codes are those of the sales page it is sold on. Results are also shown counting each coach once.
+- **Hypothesis 1:** the share of programs above $150 per contact hour and the median price per contact hour, compared with $150; the mean is also reported and outliers stay in. Self-paced courses are judged against the $300 line separately. Music-only shares are also reported.
+- **2a:** the share of programs above $150 whose sales page uses at least one tactic (thin pages excluded), reported as pre-registered and called a low bar (95% of coded pages use at least one).
+- **2b:** the median price per contact hour of programs with tactics against those without, with a Mann–Whitney U test (two-sided). Because only about 5% of pages use no tactic, this comparison will be weak, and the paper says so.
+- **Tactics and price:** Spearman rank correlations between price per contact hour and (a) tactic count and (b) tactics per 1,000 words, each with a 95% bootstrap interval; shown on the fuzzy scatter (figure 2).
+- **E3, the U shape:** median tactic density in the cheapest, middle and most expensive thirds of programs by price per contact hour.
+- **Each tactic:** for each of the 12 codes, the median price per contact hour with and without it (descriptive, no test per code).
+- **Checks, each run both ways:** low and high ends of every range (contact time and group size); with and without photo-based group sizes; with and without the flagged pages; with and without OutcomePromise; with and without seed and pitch programs.
+- **Reading the tests:** with this sample, effect sizes and intervals matter more than p-values; a result is called clear only if it holds in the main run and in the checks.
+
 ## Expectations before prices are revealed
 
 _Written before any price, per-hour figure or result was seen. Each entry is dated._
