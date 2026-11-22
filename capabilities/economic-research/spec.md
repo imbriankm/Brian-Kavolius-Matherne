@@ -356,7 +356,7 @@ _Record (Claude), for me to check: each step actually taken, in order, with its 
 ## Scope and page decisions before prices are revealed (2026-11-22)
 
 - **Audition preparation stays in.** Let's leave audition prep programs in. This might be bias: one of the seed programs, an audition-prep program, is the main motivator for this research. The 12 programs typed "professional audition" are all kept.
-- **Thin pages:** pages with too little sales text to code (short booking listings, checkout forms, a login page; about 14, from the AI coder's page flags) are left out of the sales-language analysis. They stay in the price-only questions (hypothesis 1, what a buyer can know, refunds and guarantees), which do not depend on the language codes. Claude proposed this; I was unsure, then decided: keep them.
+- **Thin pages (rule set 2026-11-22):** a page is thin if the AI coder flagged it as having little sales text **and** it is under 500 words: 14 pages (L-P238, L-P49, L-P85, L-P203 to L-P207, L-P24, L-P34, L-P234, L-P166, L-P83, L-P159). Thin pages are left out of the sales-language analysis. They stay in the price-only questions (hypothesis 1, what a buyer can know, refunds and guarantees), which do not depend on the language codes. Claude proposed this; I was unsure, then decided: keep them.
 - **Incomplete captures:** fixed where possible (the FAQ answers that did not open, a description cut off mid-sentence), then re-coded.
 - **All other flagged pages** (several offers on one page, mixed-in text, closed enrollment) stay in, and the main results are also run without them as a check.
 
@@ -373,7 +373,7 @@ _Written before any price, per-hour figure or result was seen. Each entry is dat
 5. **Urgency on dense pages (2026-11-22):** I think the highest density programs will have a lot of urgency. _(Tested as: Urgency is more common among the densest pages than among the rest.)_
 6. **Apply and Exclusivity together (2026-11-22):** I think applications and exclusivity will often be seen together. _(Tested as: a page with Apply is more likely to have Exclusivity than a page without it.)_
 
-**Tactics-only "before" look (2026-11-22, still no prices seen):** 236 pages after removing 20 thin pages. 95% use at least one tactic; median 4 tactics; tactic count and page length rank-correlate at 0.59. E4 (most programs have an origin story): not supported, OriginStory on 27%. E1 (extremely common): not supported. E5 (urgency on the densest pages): not supported, 15% in the densest quarter and 15% elsewhere. E6 (Apply and Exclusivity together): supported, Exclusivity on 47% of pages with Apply and 13% of pages without.
+**Tactics-only "before" look (2026-11-22, still no prices seen):** 242 pages after removing the 14 thin pages. 95% use at least one tactic; median 3.5 tactics; tactic count and page length rank-correlate at about 0.6. E4 (most programs have an origin story): not supported, OriginStory on 26%. E1 (extremely common): not supported. E5 (urgency on the densest pages): not supported, 15% in the densest quarter and 15% elsewhere. E6 (Apply and Exclusivity together): supported, Exclusivity on 47% of pages with Apply and 13% of pages without.
 
 ## Planned figures
 
